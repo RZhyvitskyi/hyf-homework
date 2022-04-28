@@ -31,6 +31,8 @@ a:hover {
   color: white;
 }
 
+/* Mobile First Styles ----------------------------------------------------- */
+
 h1 {
   margin-bottom: 12px;
   font-size: 26px;
@@ -68,7 +70,6 @@ h2 {
 }
 
 .header-wrapper__info p {
-  margin-bottom: 5px;
   font-size: 18px;
 }
 
@@ -77,18 +78,10 @@ h2 {
   font-size: 18px;
 }
 
-.header-wrapper__contact-info > a {
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
 /* Main content Styles -----------------------------------------------------*/
 
 main {
   background-color: #00adb5;
-}
-
-.profile {
 }
 
 .profile-info,
@@ -110,7 +103,7 @@ main {
   margin-bottom: 10px;
 }
 
-/* Aside Styles*/
+/* Aside Styles -------------------------------------------------------- */
 
 aside h3 {
   text-align: center;
@@ -260,4 +253,90 @@ aside li {
   font-weight: 400;
   display: inline-block;
   margin-right: 5px;
+}
+
+/* Desktop Styles -----------------------------------------------------*/
+
+@media screen and (min-width: 720px) {
+  .container {
+    width: 720px;
+    margin: 0 auto;
+  }
+
+  /* Header Styles ------------------------------------------------------------*/
+
+  h1 {
+    margin-bottom: 50px;
+  }
+
+  .main-header__wrapper {
+    display: flex;
+  }
+
+  .header-wrapper__img {
+    flex-basis: 33%;
+  }
+
+  .header-wrapper__info {
+    padding: 40px;
+    color: white;
+  }
+
+  .header-wrapper__info p {
+    font-size: 18px;
+  }
+
+  /* Main content Styles -----------------------------------------------------*/
+
+  main {
+    padding-top: 20px;
+  }
+
+  .main__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(4, auto);
+    justify-content: space-between;
+    column-gap: 10px;
+  }
+
+  /* Aside Styles -------------------------------------------------------- */
+
+  aside {
+    grid-row: 1 / span 4;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .driving,
+  .birth-info {
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .skills-list {
+    padding: 10px;
+  }
+
+  .skill-level-list {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .skill-level-list__item {
+    width: 35px;
+    height: 5px;
+    background-color: grey;
+  }
+
+  .level_active {
+    background-color: white;
+  }
 }
