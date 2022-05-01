@@ -3,7 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: white;
+  color: #fff;
 }
 
 body {
@@ -28,7 +28,7 @@ a:link {
 }
 
 a:hover {
-  color: white;
+  color: #fff;
 }
 
 /* Mobile First Styles ----------------------------------------------------- */
@@ -42,7 +42,7 @@ h2 {
   text-align: center;
   font-size: 20px;
   background-color: #393e46;
-  color: white;
+  color: #fff;
 }
 
 .container {
@@ -66,7 +66,7 @@ h2 {
 .header-wrapper__info {
   flex-basis: 50%;
   padding: 10px;
-  color: white;
+  color: #fff;
 }
 
 .header-wrapper__info p {
@@ -109,7 +109,7 @@ aside h3 {
   text-align: center;
   font-size: 20px;
   background-color: #393e46;
-  color: white;
+  color: #fff;
 }
 
 aside li {
@@ -150,7 +150,7 @@ aside li {
 .driving-list p {
   text-align: center;
   font-size: 18px;
-  color: black;
+  color: #000;
 }
 
 .skills-list {
@@ -184,7 +184,7 @@ aside li {
 }
 
 .level_active {
-  background-color: white;
+  background-color: #fff;
 }
 
 /* Buttons Styles --------------------------------------------------------- */
@@ -195,7 +195,7 @@ aside li {
   display: inline-block;
   border-radius: 10px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .social__button:hover {
@@ -205,7 +205,7 @@ aside li {
 
 .e-mail {
   background-color: #d93025;
-  color: white;
+  color: #fff;
 }
 
 .e-mail::before {
@@ -218,7 +218,7 @@ aside li {
 
 .phone {
   background-color: #acb61f;
-  color: white;
+  color: #fff;
 }
 
 .phone::before {
@@ -231,7 +231,7 @@ aside li {
 
 .github {
   background-color: #24292f;
-  color: white;
+  color: #fff;
 }
 
 .github::before {
@@ -244,7 +244,7 @@ aside li {
 
 .linkedin {
   background-color: #0a66c2;
-  color: white;
+  color: #fff;
 }
 
 .linkedin::before {
@@ -279,7 +279,7 @@ aside li {
 
   .header-wrapper__info {
     padding: 40px;
-    color: white;
+    color: #fff;
   }
 
   .header-wrapper__info p {
@@ -337,6 +337,6 @@ aside li {
   }
 
   .level_active {
-    background-color: white;
+    background-color: #fff;
   }
 }
