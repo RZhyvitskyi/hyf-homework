@@ -1,0 +1,8 @@
+{
+  "bracketSameLine": true,
+  "tabWidth": 2,
+  "arrowParens": "always",
+  "printWidth": 80,
+  "html.format.wrapAttributes": "force-aligned",
+  "singleQuote": true
+}
