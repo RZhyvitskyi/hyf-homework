@@ -1,0 +1,42 @@
+.nav__wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #000;
+}
+
+.nav__link {
+  font-size: 26px;
+}
+
+.nav__link:visited {
+  color: #000;
+}
+
+.nav__link:active {
+  color: #898989;
+}
+
+.nav__link:hover {
+  color: #898989;
+}
+
+.nav__link_current {
+  color: #898989;
+}
+
+.nav__link_current:visited {
+  color: #898989;
+}
+
+@media screen and (min-width: 576px) {
+  .nav__wrapper {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .nav__link {
+    font-size: 20px;
+  }
+}
