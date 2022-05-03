@@ -3,5 +3,35 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
+    gap: 5px;
+  }
+
+  &__link {
+    font-size: 20px;
+  }
+
+  &__link:visited {
+    color: #000;
+  }
+
+  &__link:active {
+    color: #898989;
+  }
+
+  &__link:hover {
+    color: #898989;
+  }
+
+  .nav__link_current {
+    color: #898989;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .nav {
+    &__wrapper {
+      flex-direction: row;
+      gap: 30px;
+    }
   }
 }

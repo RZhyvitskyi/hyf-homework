@@ -17,7 +17,7 @@
     <nav class="nav">
       <div class="container nav__wrapper">
         <a href="#" class="nav__link">home</a>
-        <a href="#" class="nav__link">about</a>
+        <a href="#" class="nav__link nav__link_current">about</a>
         <a href="#" class="nav__link">our services</a>
         <a href="#" class="nav__link">our office</a>
       </div>
@@ -86,8 +86,8 @@
               </a>
             </li>
             <li class="logotypes__item">
-              <a target="_blank" href="https://mthpfond.dk/">
-                <img src="./src/images/logo/mthpfond.svg" alt="mthpfond" />
+              <a target="_blank" href="https://www.munindata.com/">
+                <img src="./src/images/logo/munindata.svg" alt="munindata" />
               </a>
             </li>
             <li class="logotypes__item">
@@ -97,7 +97,7 @@
             </li>
             <li class="logotypes__item">
               <a target="_blank" href="https://www.novicell.dk/">
-                <img src="./src/images/logo/novicell.svg" alt="novicell" />
+                <img src="./src/images/logo/novicell.png" alt="novicell" />
               </a>
             </li>
             <li class="logotypes__item">
@@ -151,14 +151,13 @@
         <div class="find-us">
           <h5>Find us</h5>
           <iframe
+            class="g-map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2306.24834007958!2d11.847317115889451!3d54.68765738028206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ad3b1d2b66627f%3A0x28c2e2f96763b37c!2sEnghavevej%2080%2C%204892%20Kettinge!5e0!3m2!1sru!2sdk!4v1651496010511!5m2!1sru!2sdk"
-            width="200"
-            height="200"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <span>Hack Your Future Copenhagen</span>
+          <span class="find-us__address">Hack Your Future Copenhagen</span>
           <span>M-Th: 7am - 4pm</span>
           <span>Fri-Sat: 9am - 8pm</span>
         </div>
@@ -169,24 +168,35 @@
         <div class="archives">
           <h5>Archives</h5>
           <ul class="archives__list">
-            <li class="archives__item">
+            <li class="archives__item link_underline link_hover">
               <a target="_blank" href="#">March 2016</a>
             </li>
-            <li class="archives__item">
+            <li class="archives__item link_underline link_hover">
               <a target="_blank" href="#">February 2016</a>
             </li>
-            <li class="archives__item">
+            <li class="archives__item link_underline link_hover">
               <a target="_blank" href="#">January 2016</a>
             </li>
           </ul>
         </div>
         <div class="navigation">
+          <h5>Navigation</h5>
           <ul class="navigation__list">
-            <li class="navigation__item"><a href="#">Home</a></li>
-            <li class="navigation__item"><a href="#">About</a></li>
-            <li class="navigation__item"><a href="#">History</a></li>
-            <li class="navigation__item"><a href="#">Contact</a></li>
-            <li class="navigation__item"><a href="#">Blog</a></li>
+            <li class="navigation__item link_underline link_hover">
+              <a href="#">Home</a>
+            </li>
+            <li class="navigation__item link_underline link_hover">
+              <a href="#">About</a>
+            </li>
+            <li class="navigation__item link_underline link_hover">
+              <a href="#">History</a>
+            </li>
+            <li class="navigation__item link_underline link_hover">
+              <a href="#">Contact</a>
+            </li>
+            <li class="navigation__item link_underline link_hover">
+              <a href="#">Blog</a>
+            </li>
           </ul>
         </div>
       </div>

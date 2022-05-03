@@ -1,5 +1,5 @@
 img {
-  width: 100px;
+  width: 100%;
 }
 
 body {
@@ -9,6 +9,14 @@ body {
 a:link {
   text-decoration: none;
   color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .container {
