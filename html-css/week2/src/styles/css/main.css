@@ -297,6 +297,56 @@ h4 {
   column-gap: 10%;
 }
 
+@media screen and (min-width: 576px) {
+  .main__wrapper {
+    padding: 20px 0;
+  }
+  .main__wrapper .logotypes__list {
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 3%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main__wrapper {
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 80px;
+    row-gap: 80px;
+  }
+  .main__wrapper h4 {
+    font-size: 16px;
+  }
+  .main__wrapper .industry {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .main__wrapper .industry p {
+    font-size: 12px;
+  }
+  .main__wrapper .practical {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  .main__wrapper .gallery {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  .main__wrapper .logotypes {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  .main__wrapper .logotypes__list {
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    place-items: center;
+    column-gap: 5%;
+  }
+}
+
 .footer {
   background-color: #6736cd;
   color: #fff;
@@ -364,4 +414,60 @@ h4 {
 
 .footer__wrapper .find-us__address {
   font-weight: 700;
+}
+
+@media screen and (min-width: 576px) {
+  .footer__wrapper {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+    column-gap: 40px;
+  }
+  .footer__wrapper .find-us .g-map {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__wrapper {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    row-gap: 0;
+    column-gap: 0;
+  }
+  .footer__wrapper > div {
+    flex-basis: 23%;
+  }
+  .footer__wrapper h5 {
+    font-size: 18px;
+  }
+  .footer__wrapper .find-us .g-map {
+    width: 160px;
+    height: 160px;
+  }
+  .footer__wrapper .archives__list,
+  .footer__wrapper .navigation__list {
+    gap: 20px;
+  }
+  .footer__wrapper .link_underline {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__wrapper > div {
+    flex-basis: 20%;
+  }
+  .footer__wrapper h5 {
+    margin-bottom: 40px;
+  }
+  .footer__wrapper .find-us .g-map {
+    width: 220px;
+    height: 220px;
+  }
 }
