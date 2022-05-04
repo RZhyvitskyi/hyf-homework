@@ -6,27 +6,18 @@
   color: #000;
 }
 
-.nav__link {
+.nav__link:link,
+.nav__link:visited {
+  color: #000;
   font-size: 26px;
 }
 
-.nav__link:visited {
-  color: #000;
-}
-
-.nav__link:active {
-  color: #898989;
-}
-
+.nav__link:active,
 .nav__link:hover {
   color: #898989;
 }
 
-.nav__link_current {
-  color: #898989;
-}
-
-.nav__link_current:visited {
+.nav__link.nav__link_current {
   color: #898989;
 }
 
@@ -36,7 +27,7 @@
     gap: 30px;
   }
 
-  .nav__link {
+  .nav__link:link {
     font-size: 20px;
   }
 }
