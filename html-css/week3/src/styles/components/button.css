@@ -12,6 +12,6 @@
 .btn:hover,
 .btn:active {
   border: 2px solid #888;
-  background-color: rgba(238, 238, 238, 0.521);
+  background-color: #fff;
   color: #000;
 }
