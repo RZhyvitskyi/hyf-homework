@@ -1,0 +1,46 @@
+.hero {
+  margin-bottom: 8rem;
+}
+
+.hero__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(209, 209, 209, 1) 100%
+  );
+}
+
+.hero__text {
+  padding: 7.4rem 4.4rem;
+}
+
+.hero__text h2 {
+  color: #495057;
+}
+
+.hero__text span {
+  font-weight: 800;
+  color: #000;
+}
+
+.hero__img {
+  background: url(../../images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__wrapper h2 {
+  margin-bottom: 4.8rem;
+}
+
+.hero__wrapper p {
+  margin-bottom: 2.4rem;
+  font-size: 1.8rem;
+}
+
+.hero__wrapper p:last-child {
+  margin: 0;
+}

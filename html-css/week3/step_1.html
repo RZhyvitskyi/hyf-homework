@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="src/styles/base/reset.css" />
+    <link rel="stylesheet" href="src/styles/base/common.css" />
+    <link rel="stylesheet" href="src/styles/layout/header.css" />
+    <link rel="stylesheet" href="src/styles/layout/hero.css" />
+    <link rel="stylesheet" href="src/styles/layout/form-section.css" />
+    <link rel="stylesheet" href="src/styles/components/progress-bar.css" />
+    <link rel="stylesheet" href="src/styles/components/button.css" />
+    <title>Yourcustomtailor</title>
+  </head>
+  <body>
+    <header class="header__top">
+      <div class="container header__wrapper">
+        <div class="logo"><h1>Logo</h1></div>
+        <nav>
+          <span>Navigation</span>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container hero__wrapper">
+          <div class="hero__text">
+            <h2>Sign up to <span>yourcustomtailor.com</span></h2>
+            <p>
+              We can't wait to help you improve your life-style and gain the
+              attention from people around you!
+            </p>
+            <p>
+              Sign up below to save up to <span>70%</span> on apparel, hand-bags
+              and cosmetics. Our agents are busy picking the best offers that
+              match your preferences and style. Every week we will send you a
+              hand-picked selection - we just need to know a few details about
+              your first...
+            </p>
+          </div>
+          <div class="hero__img">&zwnj;</div>
+        </div>
+      </section>
+      <section class="form-section mb_medium">
+        <div class="container form-section__wrapper">
+          <h3>Step 1/4 - tell us who you are?</h3>
+          <div class="progress-bar">
+            <span class="progress-bar__title">Progress</span>
+            <div class="progress-bar__wrapper">
+              <div class="progress-bar__complited">&zwnj;</div>
+            </div>
+          </div>
+          <form action="#" class="form__sign-up" method="post">
+            <p class="mb_medium">
+              Nice to meet you. Let's spend a minute to get to know each other?
+              Please enter the following:
+            </p>
+            <div
+              class="mb_medium dg_2-col grid-col-gap_small grid-row-gap_small">
+              <div class="df_space-between align-items_center">
+                <label for="name"> First name* </label>
+                <input
+                  id="name"
+                  type="text"
+                  class="input_large"
+                  name="name"
+                  required />
+              </div>
+              <div class="df_space-between align-items_center">
+                <label for="surname"> Last name* </label>
+                <input
+                  id="surname"
+                  type="text"
+                  class="input_large"
+                  name="surname"
+                  required />
+              </div>
+              <div class="country-info df_space-between align-items_center">
+                <label for="country"> Country* </label>
+                <select
+                  name="country"
+                  id="country"
+                  class="select_large"
+                  required>
+                  <option value="0">&zwnj;</option>
+                  <option value="1">Denmark</option>
+                  <option value="2">Sweden</option>
+                  <option value="3">Norway</option>
+                  <option value="4">USA</option>
+                  <option value="5">Ukraine</option>
+                  <option value="6">Canada</option>
+                  <option value="7">Germany</option>
+                  <option value="8">Poland</option>
+                  <option value="9">Turkey</option>
+                  <option value="10">Mexico</option>
+                </select>
+              </div>
+              <div class="street_address df_space-between align-items_center">
+                <label for="street"> Street address* </label>
+                <input
+                  id="street"
+                  type="text"
+                  class="input_large"
+                  name="street"
+                  required />
+              </div>
+              <div class="post-code df_space-between align-items_center">
+                <label for="post-code"> Post code* </label>
+                <input
+                  id="post-code"
+                  type="text"
+                  class="input_large"
+                  name="post-code"
+                  required />
+              </div>
+            </div>
+            <div class="shipping-address">
+              <p class="mb_small">
+                Use the same address for billing and shipping? Uncheck below to
+                fill out a separate shipping address.
+              </p>
+              <label for="shipping">Shipping address</label>
+              <input
+                class="shipping_checked mb_medium"
+                type="checkbox"
+                checked
+                name="shipping-same" />
+              <div class="shipping__to">
+                <h4 class="mb_small">Shipping address</h4>
+                <div
+                  class="mb_medium dg_2-col grid-col-gap_small grid-row-gap_small">
+                  <div class="df_space-between align-items_center">
+                    <label for="shipping-name"> First name* </label>
+                    <input
+                      id="shipping-name"
+                      type="text"
+                      class="input_large"
+                      name="shipping-name" />
+                  </div>
+                  <div class="df_space-between align-items_center">
+                    <label for="shipping-surname"> Last name* </label>
+                    <input
+                      id="shipping-surname"
+                      type="text"
+                      name="shipping-surname"
+                      class="input_large" />
+                  </div>
+                  <div class="country-info df_space-between align-items_center">
+                    <label for="shipping-country"> Country* </label>
+                    <select
+                      name="shipping-country"
+                      id="shipping-country"
+                      class="select_large">
+                      <option value="0">&zwnj;</option>
+                      <option value="1">Denmark</option>
+                      <option value="2">Sweden</option>
+                      <option value="3">Norway</option>
+                      <option value="4">USA</option>
+                      <option value="5">Ukraine</option>
+                      <option value="6">Canada</option>
+                      <option value="7">Germany</option>
+                      <option value="8">Poland</option>
+                      <option value="9">Turkey</option>
+                      <option value="10">Mexico</option>
+                    </select>
+                  </div>
+                  <div
+                    class="street_address df_space-between align-items_center">
+                    <label for="shipping-street"> Street address* </label>
+                    <input
+                      id="shipping-street"
+                      type="text"
+                      class="input_large"
+                      name="shipping-street" />
+                  </div>
+                  <div class="post-code df_space-between align-items_center">
+                    <label for="shipping-post-code"> Post code* </label>
+                    <input
+                      id="shipping-post-code"
+                      type="text"
+                      class="input_large"
+                      name="shipping-post-code" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="description mb_large">
+              <div class="description__info">
+                <h4 class="mb_small">Profile description</h4>
+                <p class="description_subtitle">
+                  Please provide a short description of yourself to be displayed
+                  on our social community pages.
+                </p>
+              </div>
+              <textarea name="description" id="description">
+                  &zwnj;
+                </textarea
+              >
+            </div>
+          </form>
+          <div class="next-step">
+            <a href="step_2.html" class="btn">Next step</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

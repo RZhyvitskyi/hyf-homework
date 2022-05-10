@@ -1,0 +1,49 @@
+.form-section__wrapper {
+  padding: 15rem;
+  border: 2px solid #000;
+}
+
+.form-section__wrapper h3 {
+  margin-bottom: 2.4rem;
+}
+
+.form__sign-up {
+}
+
+.form__sign-up p {
+  font-size: 1.8rem;
+}
+
+.form__sign-up label {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.street_address,
+.post-code {
+  grid-row: 3 / 4;
+}
+
+.shipping__to {
+  display: none;
+  transition: all 0.3s;
+}
+
+.shipping_checked:not(:checked) + .shipping__to {
+  display: block;
+}
+
+.description {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  column-gap: 2.4rem;
+}
+
+.form__sign-up .description_subtitle {
+  font-size: 1.4rem;
+}
+
+.next-step {
+  display: flex;
+  justify-content: flex-end;
+}
