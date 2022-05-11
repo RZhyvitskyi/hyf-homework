@@ -11,12 +11,76 @@
   box-shadow: inset 0px 0px 0px 2px #888;
 }
 
-.progress-bar__complited {
+.progress-bar_quarter,
+.progress-bar_half,
+.progress-bar_three-quarters,
+.progress-bar_completed {
   position: absolute;
   top: 0;
   left: 0;
-  width: 25%;
   height: 100%;
   border: 2px solid #888;
   background-color: #ddd;
+}
+
+/* Progress bar Animation ------------------------------------------------------ */
+
+@keyframes progress_quarter {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 25%;
+  }
+}
+
+@keyframes progress_half {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes progress_three-quarters {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes progress_completed {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.progress-bar_quarter {
+  animation: 2s ease-out 0s 1 progress_quarter;
+  width: 25%;
+}
+
+.progress-bar_half {
+  animation: 2s ease-out 0s 1 progress_half;
+  width: 50%;
+}
+
+.progress-bar_three-quarters {
+  animation: 2s ease-out 0s 1 progress_three-quarters;
+  width: 75%;
+}
+
+.progress-bar_completed {
+  animation: 2s ease-out 0s 1 progress_completed;
+  width: 100%;
 }

@@ -21,7 +21,7 @@
   <body>
     <header class="header__top">
       <div class="container header__wrapper">
-        <div class="logo"><h1>Logo</h1></div>
+        <a href="#" class="logo"><h1>Logo</h1></a>
         <nav>
           <span>Navigation</span>
         </nav>
@@ -31,7 +31,9 @@
       <section class="hero">
         <div class="container hero__wrapper">
           <div class="hero__text">
-            <h2>Sign up to <span>yourcustomtailor.com</span></h2>
+            <h2 class="mb_large">
+              Sign up to <span>yourcustomtailor.com</span>
+            </h2>
             <p>
               We can't wait to help you improve your life-style and gain the
               attention from people around you!
@@ -53,7 +55,7 @@
           <div class="progress-bar mb_small">
             <span class="progress-bar__title">Progress</span>
             <div class="progress-bar__wrapper">
-              <div class="progress-bar__complited">&zwnj;</div>
+              <div class="progress-bar_quarter">&zwnj;</div>
             </div>
           </div>
           <form action="#" class="form__sign-up" method="post">
@@ -81,7 +83,7 @@
                   name="surname"
                   required />
               </div>
-              <div class="country-info df_space-between align-items_center">
+              <div class="df_space-between align-items_center">
                 <label for="country"> Country* </label>
                 <select
                   name="country"
@@ -101,7 +103,7 @@
                   <option value="10">Mexico</option>
                 </select>
               </div>
-              <div class="street_address df_space-between align-items_center">
+              <div class="grid-row_3-4 df_space-between align-items_center">
                 <label for="street"> Street address* </label>
                 <input
                   id="street"
@@ -110,13 +112,14 @@
                   name="street"
                   required />
               </div>
-              <div class="post-code df_space-between align-items_center">
+              <div class="grid-row_3-4 df_space-between align-items_center">
                 <label for="post-code"> Post code* </label>
                 <input
                   id="post-code"
                   type="text"
                   class="input_large"
                   name="post-code"
+                  pattern="[0-9]{4}"
                   required />
               </div>
             </div>
@@ -151,7 +154,7 @@
                       name="shipping-surname"
                       class="input_large" />
                   </div>
-                  <div class="country-info df_space-between align-items_center">
+                  <div class="df_space-between align-items_center">
                     <label for="shipping-country"> Country* </label>
                     <select
                       name="shipping-country"
@@ -190,7 +193,7 @@
                 </div>
               </div>
             </div>
-            <div class="description mb_large">
+            <div class="description">
               <div class="description__info">
                 <h4 class="mb_small">Profile description</h4>
                 <p class="description_subtitle">
@@ -198,14 +201,14 @@
                   on our social community pages.
                 </p>
               </div>
-              <textarea name="description" id="description">
+              <textarea name="description" id="description" maxlength="500">
                   &zwnj;
                 </textarea
               >
             </div>
           </form>
           <div class="next-step">
-            <a href="step_2.html" class="btn">Next step</a>
+            <a href="step_2.html" class="btn mt_large">Next step</a>
           </div>
         </div>
       </section>

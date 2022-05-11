@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="src/styles/base/reset.css" />
+    <link rel="stylesheet" href="src/styles/base/common.css" />
+    <link rel="stylesheet" href="src/styles/layout/header.css" />
+    <link rel="stylesheet" href="src/styles/layout/hero.css" />
+    <link rel="stylesheet" href="src/styles/layout/form-section.css" />
+    <link rel="stylesheet" href="src/styles/components/progress-bar.css" />
+    <link rel="stylesheet" href="src/styles/components/button.css" />
+    <title>Yourcustomtailor</title>
+  </head>
+  <body>
+    <header class="header__top">
+      <div class="container header__wrapper">
+        <a href="#" class="logo"><h1>Logo</h1></a>
+        <nav>
+          <span>Navigation</span>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container hero__wrapper">
+          <div class="hero__text">
+            <h2>Sign up to <span>yourcustomtailor.com</span></h2>
+          </div>
+        </div>
+      </section>
+      <section class="form-section mb_medium">
+        <div class="container form-section__wrapper">
+          <h3 class="mb_large">Step 4/4 - Payment</h3>
+          <div class="progress-bar mb_small">
+            <span class="progress-bar__title">Progress</span>
+            <div class="progress-bar__wrapper">
+              <div class="progress-bar_completed">&zwnj;</div>
+            </div>
+          </div>
+          <form action="#" class="form__sign-up" method="post">
+            <p class="mb_medium">Please fill in your payment data</p>
+            <div
+              class="mb_medium dg_2-col grid-col-gap_small grid-row-gap_small">
+              <div class="df_space-between align-items_center">
+                <label for="card-name"> Name on card </label>
+                <input
+                  class="input_large"
+                  id="card-name"
+                  type="text"
+                  name="card-name"
+                  required />
+              </div>
+              <div class="grid-row_2-3 df_space-between align-items_center">
+                <label for="card-type"> Card type </label>
+                <select
+                  class="select_large"
+                  name="card-type"
+                  id="card-type"
+                  required>
+                  <option value="1">Visa</option>
+                  <option value="2">Master Card</option>
+                </select>
+              </div>
+              <div class="grid-row_3-4 df_space-between align-items_center">
+                <label for="card-number"> Credit card number </label>
+                <input
+                  class="input_large"
+                  id="card-number"
+                  type="number"
+                  name="card-number"
+                  pattern=".{16}"
+                  required />
+              </div>
+              <div class="grid-row_3-4 df_space-between align-items_center">
+                <label for="card-first-name"> First name </label>
+                <input
+                  class="input_large"
+                  id="card-first-name"
+                  type="text"
+                  name="card-first-name"
+                  required />
+              </div>
+              <div
+                class="grid-row_4-5 mb_medium dg_2-col grid-col-gap_very-small grid-row-gap_small">
+                <div class="df_space-between align-items_center">
+                  <label for="card-month"> Expiry month </label>
+                  <input
+                    class="input_small"
+                    id="card-month"
+                    type="number"
+                    name="card-month"
+                    pattern=".{2}"
+                    required />
+                </div>
+                <div class="df_space-between align-items_center">
+                  <label for="card-year"> Expiry year </label>
+                  <input
+                    class="input_small"
+                    id="card-year"
+                    type="number"
+                    name="card-year"
+                    pattern=".{2}"
+                    required />
+                </div>
+                <div class="df_space-between align-items_center">
+                  <label for="card-ccv"> CCV </label>
+                  <input
+                    class="input_small"
+                    id="card-ccv"
+                    type="number"
+                    name="card-ccv"
+                    pattern=".{3}"
+                    required />
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="next-step">
+            <a href="step_1.html" class="btn mt_large">Next step</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

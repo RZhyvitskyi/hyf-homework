@@ -27,13 +27,9 @@
 }
 
 .hero__img {
-  background: url(../../images/hero.jpg);
+  background: url(./src/images/hero.jpg);
   background-position: center;
   background-size: cover;
-}
-
-.hero__wrapper h2 {
-  margin-bottom: 4.8rem;
 }
 
 .hero__wrapper p {

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="src/styles/base/reset.css" />
+    <link rel="stylesheet" href="src/styles/base/common.css" />
+    <link rel="stylesheet" href="src/styles/layout/header.css" />
+    <link rel="stylesheet" href="src/styles/layout/hero.css" />
+    <link rel="stylesheet" href="src/styles/layout/form-section.css" />
+    <link rel="stylesheet" href="src/styles/components/progress-bar.css" />
+    <link rel="stylesheet" href="src/styles/components/button.css" />
+    <title>Yourcustomtailor</title>
+  </head>
+  <body>
+    <header class="header__top">
+      <div class="container header__wrapper">
+        <a href="#" class="logo"><h1>Logo</h1></a>
+        <nav>
+          <span>Navigation</span>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container hero__wrapper">
+          <div class="hero__text">
+            <h2>Sign up to <span>yourcustomtailor.com</span></h2>
+          </div>
+        </div>
+      </section>
+      <section class="form-section mb_medium">
+        <div class="container form-section__wrapper">
+          <h3 class="mb_large">
+            Step 3/4 - Time to learn about your preferences?
+          </h3>
+          <div class="progress-bar mb_small">
+            <span class="progress-bar__title">Progress</span>
+            <div class="progress-bar__wrapper">
+              <div class="progress-bar_three-quarters">&zwnj;</div>
+            </div>
+          </div>
+          <form action="#" class="form__sign-up" method="post">
+            <p class="mb_medium">
+              What kind of items are you interested in offers on?
+            </p>
+            <div
+              class="interested-items mb_medium dg_2-col grid-col-gap_small grid-row-gap_small">
+              <div class="df_space-between align-items_center">
+                <label for="apparal"> Apparal </label>
+                <input id="apparal" type="checkbox" name="apparal" />
+              </div>
+              <div class="df_space-between align-items_center">
+                <label for="jewelry"> Jewelry </label>
+                <input id="jewelry" type="checkbox" name="jewelry" />
+              </div>
+              <div class="df_space-between align-items_center">
+                <label for="accessories"> Accessories </label>
+                <input id="accessories" type="checkbox" name="accessories" />
+              </div>
+              <div class="df_space-between align-items_center">
+                <label for="shoes"> Shoes </label>
+                <input id="shoes" type="checkbox" name="shoes" />
+              </div>
+              <div class="df_space-between align-items_center">
+                <label for="handbags"> Handbags </label>
+                <input id="handbags" type="checkbox" name="handbags" />
+              </div>
+            </div>
+            <div class="style-images">
+              <p class="mb_medium">
+                Choose the images that best resemble your style
+              </p>
+              <ul class="style-images__list">
+                <li class="style-images__item">
+                  <label for="img_1" class="select-img"
+                    ><img
+                      src="src/images/style_img/1.jpg"
+                      alt="" />Select</label
+                  ><input id="img_1" type="checkbox" name="img_1" />
+                </li>
+                <li class="style-images__item">
+                  <label for="img_2" class="select-img"
+                    ><img
+                      src="src/images/style_img/2.jpg"
+                      alt="" />Select</label
+                  ><input id="img_2" type="checkbox" name="img-2" />
+                </li>
+                <li class="style-images__item">
+                  <label for="img_3" class="select-img"
+                    ><img
+                      src="src/images/style_img/3.jpg"
+                      alt="" />Select</label
+                  ><input id="img_3" type="checkbox" name="img_3" />
+                </li>
+                <li class="style-images__item">
+                  <label for="img_4" class="select-img"
+                    ><img
+                      src="src/images/style_img/4.jpg"
+                      alt="" />Select</label
+                  ><input id="img_4" type="checkbox" name="img_4" />
+                </li>
+                <li class="style-images__item">
+                  <label for="img_5" class="select-img"
+                    ><img
+                      src="src/images/style_img/5.jpg"
+                      alt="" />Select</label
+                  ><input id="img_5" type="checkbox" name="img_5" />
+                </li>
+                <li class="style-images__item">
+                  <label for="img_6" class="select-img"
+                    ><img
+                      src="src/images/style_img/6.jpg"
+                      alt="" />Select</label
+                  ><input id="img_6" type="checkbox" name="img_6" />
+                </li>
+                <li class="style-images__item">
+                  <label for="img_7" class="select-img"
+                    ><img
+                      src="src/images/style_img/7.jpg"
+                      alt="" />Select</label
+                  ><input id="img_7" type="checkbox" name="img_7" />
+                </li>
+                <li class="style-images__item">
+                  <label for="img_8" class="select-img"
+                    ><img
+                      src="src/images/style_img/8.jpg"
+                      alt="" />Select</label
+                  ><input id="img_8" type="checkbox" name="img_8" />
+                </li>
+              </ul>
+            </div>
+          </form>
+          <div class="next-step">
+            <a href="step_4.html" class="btn mt_large">Next step</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -12,3 +12,11 @@
 .header__wrapper span {
   font-size: 2rem;
 }
+
+.logo:link,
+.logo:visited,
+.logo:hover,
+.logo:active {
+  text-decoration: none;
+  color: #000;
+}

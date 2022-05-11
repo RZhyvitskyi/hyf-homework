@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="src/styles/base/reset.css" />
+    <link rel="stylesheet" href="src/styles/base/common.css" />
+    <link rel="stylesheet" href="src/styles/layout/header.css" />
+    <link rel="stylesheet" href="src/styles/layout/hero.css" />
+    <link rel="stylesheet" href="src/styles/layout/form-section.css" />
+    <link rel="stylesheet" href="src/styles/components/progress-bar.css" />
+    <link rel="stylesheet" href="src/styles/components/button.css" />
+    <title>Yourcustomtailor</title>
+  </head>
+  <body>
+    <header class="header__top">
+      <div class="container header__wrapper">
+        <a href="#" class="logo"><h1>Logo</h1></a>
+        <nav>
+          <span>Navigation</span>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container hero__wrapper">
+          <div class="hero__text">
+            <h2>Sign up to <span>yourcustomtailor.com</span></h2>
+          </div>
+        </div>
+      </section>
+      <section class="form-section mb_medium">
+        <div class="container form-section__wrapper">
+          <h3 class="mb_large">Step 2/4 - how can we reach you?</h3>
+          <div class="progress-bar mb_small">
+            <span class="progress-bar__title">Progress</span>
+            <div class="progress-bar__wrapper">
+              <div class="progress-bar_half">&zwnj;</div>
+            </div>
+          </div>
+          <form action="#" class="form__sign-up" method="post">
+            <p class="mb_medium">
+              We will probably need to stay in touch somehow. Let us know how we
+              can reach you?
+            </p>
+            <div
+              class="mb_medium dg_2-col grid-col-gap_small grid-row-gap_small">
+              <div class="df_space-between align-items_center">
+                <label for="email"> Email* </label>
+                <input
+                  id="email"
+                  type="email"
+                  class="input_large"
+                  name="email"
+                  required />
+              </div>
+              <div class="df_space-between align-items_center">
+                <label for="phone"> Phone </label>
+                <input
+                  id="phone"
+                  type="number"
+                  class="input_large"
+                  name="phone" />
+              </div>
+              <div class="df_space-between align-items_center">
+                <label for="password"> Password* </label>
+                <input
+                  id="password"
+                  type="text"
+                  class="input_large"
+                  name="password"
+                  pattern="(?=.*[a-z])(?=.*[A-Z]).{10,}"
+                  required />
+              </div>
+              <div class="grid-row_3-4 df_space-between align-items_center">
+                <label for="repeat-password"> Re-enter Password* </label>
+                <input
+                  id="repeat-password"
+                  type="text"
+                  class="input_large"
+                  name="repeat-password"
+                  pattern="(?=.*[a-z])(?=.*[A-Z]).{10,}"
+                  required />
+              </div>
+            </div>
+            <div class="newsletter">
+              <p class="mb_small">I want to sign up for the newsletter</p>
+              <div class="newsletter__wrapper">
+                <div>
+                  <label for="newsletter__weekly">Weekly news</label>
+                  <input
+                    name="newsletter"
+                    id="newsletter__weekly"
+                    type="radio"
+                    checked />
+                </div>
+                <div>
+                  <label for="newsletter__monthly">Monthly news</label>
+                  <input
+                    name="newsletter"
+                    id="newsletter__monthly"
+                    type="radio" />
+                </div>
+                <div>
+                  <label for="newsletter__no-news">Don't send me news</label>
+                  <input
+                    name="newsletter"
+                    id="newsletter__no-news"
+                    type="radio" />
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="next-step">
+            <a href="step_3.html" class="btn mt_large">Next step</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

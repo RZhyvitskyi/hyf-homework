@@ -1,7 +1,9 @@
+/* Form Styling ----------------------------------------------------------------------- */
+
 .form-section__wrapper {
   padding: 15rem;
   border: 2px solid #000;
-  background-color: rgba(238, 238, 238, 0.521);
+  background-color: rgba(238, 238, 238, 0.267);
 }
 
 .form__sign-up p {
@@ -13,10 +15,7 @@
   font-weight: 700;
 }
 
-.street_address,
-.post-code {
-  grid-row: 3 / 4;
-}
+/* Step 1 Styling ----------------------------------------------------------------------- */
 
 .shipping__to {
   display: none;
@@ -37,7 +36,37 @@
   font-size: 1.4rem;
 }
 
+/* Step button Styling ------------------------------------------------------------------- */
+
 .next-step {
   display: flex;
   justify-content: flex-end;
+}
+
+/* Step 2 Styling ----------------------------------------------------------------------- */
+
+.newsletter__wrapper {
+  display: flex;
+  gap: 4.8rem;
+}
+
+/* Step 3 Styling ----------------------------------------------------------------------- */
+
+.interested-items {
+  width: 40%;
+}
+
+.style-images__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2.4rem;
+  row-gap: 3.6rem;
+}
+
+.style-images__item {
+  text-align: right;
+}
+
+.style-images__item img {
+  margin-bottom: 1.2rem;
 }
