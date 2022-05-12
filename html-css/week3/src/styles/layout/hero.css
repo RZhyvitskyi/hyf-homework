@@ -1,11 +1,12 @@
+/* Mobile first ------------------------------------------------------------- */
+
 .hero {
-  margin-bottom: 8rem;
+  margin-bottom: 3.6rem;
 }
 
 .hero__wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-content: center;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 1) 0%,
@@ -14,7 +15,8 @@
 }
 
 .hero__text {
-  padding: 7.4rem 4.4rem;
+  order: 2;
+  padding: 2rem;
 }
 
 .hero__text h2 {
@@ -27,7 +29,9 @@
 }
 
 .hero__img {
-  background: url(./src/images/hero.jpg);
+  height: 30vh;
+  order: 1;
+  background: url(.src/images/hero.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -39,4 +43,26 @@
 
 .hero__wrapper p:last-child {
   margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    margin-bottom: 8rem;
+  }
+
+  .hero__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+  }
+
+  .hero__text {
+    padding: 7.4rem 4.4rem;
+    order: 1;
+  }
+
+  .hero__img {
+    height: auto;
+    order: 1;
+  }
 }

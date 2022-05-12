@@ -49,8 +49,8 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
-  letter-spacing: -0.5;
+  font-size: 2.4rem;
+  letter-spacing: -0.5px;
   line-height: 1.6;
 }
 
@@ -67,51 +67,25 @@ h4 {
   margin: 0 auto;
 }
 
-/* Grid Styling --------------------------------------------------------------------------- */
-
-.dg_2-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-}
-
-.grid-col-gap_small {
-  column-gap: 8rem;
-}
-
-.grid-col-gap_very-small {
-  column-gap: 4.8rem;
-}
-
-.grid-row-gap_small {
-  row-gap: 2.4rem;
-}
-
-.grid-row_2-3 {
-  grid-row: 2 / 3;
-}
-
-.grid-row_3-4 {
-  grid-row: 3 / 4;
-}
-
-.grid-row_4-5 {
-  grid-row: 4 / 5;
-}
-
 /* Flex Styling ---------------------------------------------------------------------------- */
 
 .df {
   display: flex;
 }
 
-.df_space-between {
-  display: flex;
-  justify-content: space-between;
+.flex-direction {
+  flex-direction: column;
 }
 
-.align-items_center {
-  align-items: center;
+/* Grid Styling --------------------------------------------------------------------------- */
+
+.dg_2-col {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.grid-row-gap_small {
+  row-gap: 2.4rem;
 }
 
 /* Inputs Styling -------------------------------------------------------------------------- */
@@ -132,17 +106,104 @@ textarea {
 /* Margin Styling ------------------------------------------------------------------------- */
 
 .mb_small {
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.8rem;
 }
 
 .mb_medium {
-  margin-bottom: 4.8rem;
+  margin-bottom: 3.6rem;
 }
 
 .mb_large {
-  margin-bottom: 6.4rem;
+  margin-bottom: 4.8rem;
 }
 
 .mt_large {
-  margin-top: 4.8rem;
+  margin-top: 3.6rem;
+}
+
+/* Media ---------------------------------------------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 3.6rem;
+  }
+
+  /* Grid Styling --------------------------------------------------------------------------- */
+
+  .dg_2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .grid-col-gap_small {
+    column-gap: 4.8rem;
+  }
+
+  .grid-col-gap_very-small {
+    column-gap: 2.4rem;
+  }
+
+  .grid-row-gap_small {
+    row-gap: 2.4rem;
+  }
+
+  .grid-row_2-3 {
+    grid-row: 2 / 3;
+  }
+
+  .grid-row_3-4 {
+    grid-row: 3 / 4;
+  }
+
+  .grid-row_4-5 {
+    grid-row: 4 / 5;
+  }
+
+  /* Flex Styling ---------------------------------------------------------------------------- */
+
+  .df {
+    display: flex;
+  }
+
+  .flex-direction {
+    flex-direction: row;
+  }
+
+  .align-items_center {
+    align-items: center;
+  }
+
+  .df_space-between {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Margin Styling ------------------------------------------------------------------------- */
+
+  .mb_small {
+    margin-bottom: 2.4rem;
+  }
+
+  .mb_medium {
+    margin-bottom: 4.8rem;
+  }
+
+  .mb_large {
+    margin-bottom: 6.4rem;
+  }
+
+  .mt_large {
+    margin-top: 4.8rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .grid-col-gap_small {
+    column-gap: 8rem;
+  }
+
+  .grid-col-gap_very-small {
+    column-gap: 4.8rem;
+  }
 }

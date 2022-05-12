@@ -1,7 +1,11 @@
 /* Form Styling ----------------------------------------------------------------------- */
 
+.form-section {
+  padding: 0 1rem;
+}
+
 .form-section__wrapper {
-  padding: 15rem;
+  padding: 2rem;
   border: 2px solid #000;
   background-color: rgba(238, 238, 238, 0.267);
 }
@@ -26,21 +30,14 @@
   display: block;
 }
 
-.description {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  column-gap: 2.4rem;
-}
-
 .form__sign-up .description_subtitle {
+  margin-bottom: 0.8rem;
   font-size: 1.4rem;
 }
 
-/* Step button Styling ------------------------------------------------------------------- */
-
-.next-step {
-  display: flex;
-  justify-content: flex-end;
+.form__sign-up textarea {
+  height: 16rem;
+  width: 100%;
 }
 
 /* Step 2 Styling ----------------------------------------------------------------------- */
@@ -58,7 +55,7 @@
 
 .style-images__list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 2.4rem;
   row-gap: 3.6rem;
 }
@@ -69,4 +66,42 @@
 
 .style-images__item img {
   margin-bottom: 1.2rem;
+}
+
+/* Step button Styling ------------------------------------------------------------------- */
+
+.next-step {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+  .form-section {
+    padding: 0 1rem;
+  }
+
+  .form-section__wrapper {
+    padding: 2.4rem;
+  }
+
+  .description {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 2.4rem;
+    align-items: center;
+  }
+
+  .form__sign-up .description_subtitle {
+    margin-bottom: 0;
+  }
+
+  .style-images__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .form-section__wrapper {
+    padding: 15rem;
+  }
 }
