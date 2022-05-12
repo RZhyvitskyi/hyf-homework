@@ -31,7 +31,7 @@
 .hero__img {
   height: 30vh;
   order: 1;
-  background: url(.src/images/hero.jpg);
+  background: url(./src/images/hero.jpg);
   background-position: center;
   background-size: cover;
 }
