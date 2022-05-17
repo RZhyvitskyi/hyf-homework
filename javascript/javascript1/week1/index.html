@@ -26,7 +26,9 @@
                 type="number"
                 id="future-year"
                 name="future-year"
-                placeholder="Enter future year" />
+                placeholder="Enter future year"
+                min="2023"
+                max="2200" />
             </div>
             <div class="calculate">
               <input
@@ -37,7 +39,7 @@
             </div>
             <div class="calculation-result">
               <span>You will be: </span>
-              <span id="future-year-result"></span>
+              <span id="future-year-result" class="year-result"></span>
             </div>
           </form>
         </section>
