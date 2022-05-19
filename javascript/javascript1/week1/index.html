@@ -7,6 +7,7 @@
     <title>JavaScript1 week 1</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="ageIfy.js"></script>
+    <script defer src="goodboyOldboy.js"></script>
   </head>
   <body>
     <main>
@@ -21,7 +22,7 @@
                   type="number"
                   id="year-of-birth"
                   name="year-of-birth"
-                  placeholder="Enter year of birth"
+                  placeholder="Your year of birth"
                   min="1900"
                   max="2022" />
               </div>
@@ -31,7 +32,7 @@
                   type="number"
                   id="future-year"
                   name="future-year"
-                  placeholder="Enter future year"
+                  placeholder="Future year"
                   min="2023"
                   max="2200" />
               </div>
@@ -46,6 +47,52 @@
             <div class="calculation-result">
               <span>You will be: </span>
               <span id="future-year-result" class="year-result"></span>
+            </div>
+          </form>
+        </section>
+
+        <section class="goodboy-oldboy">
+          <form action="#" method="get">
+            <h1>"How old will your dog be in ... ?"</h1>
+            <div class="input-wrapper">
+              <div class="input-wrapper__item">
+                <p class="error-handler" id="dog-age-error"></p>
+                <input
+                  type="number"
+                  id="dog-year-of-birth"
+                  name="dog-year-of-birth"
+                  placeholder="Dog's year of birth"
+                  min="1900"
+                  max="2022" />
+              </div>
+              <div class="input-wrapper__item">
+                <p class="error-handler" id="dog-future-error"></p>
+                <input
+                  type="number"
+                  id="dog-future-year"
+                  name="dog-future-year"
+                  placeholder="Future year"
+                  min="2023"
+                  max="2200" />
+              </div>
+            </div>
+            <div class="age-option">
+              <input
+                type="checkbox"
+                id="dog-to-human-age"
+                class="checkbox-input" />
+              <label for="dog-to-human-age">Show in dog's years?</label>
+            </div>
+            <div class="calculate">
+              <input
+                type="submit"
+                value="Calculate"
+                id="calculate-goodboy-oldboy"
+                class="btn" />
+            </div>
+            <div class="calculation-result">
+              <span>Dog will be: </span>
+              <span id="dog-future-year-result" class="year-result"></span>
             </div>
           </form>
         </section>
