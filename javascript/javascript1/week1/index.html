@@ -15,20 +15,26 @@
           <form action="#" method="get">
             <h1>"How old will you be in ... ?"</h1>
             <div class="input-wrapper">
-              <input
-                type="number"
-                id="year-of-birth"
-                name="year-of-birth"
-                placeholder="Enter year of birth"
-                min="1900"
-                max="2022" />
-              <input
-                type="number"
-                id="future-year"
-                name="future-year"
-                placeholder="Enter future year"
-                min="2023"
-                max="2200" />
+              <div class="input-wrapper__item">
+                <p class="error-handler" id="age-error"></p>
+                <input
+                  type="number"
+                  id="year-of-birth"
+                  name="year-of-birth"
+                  placeholder="Enter year of birth"
+                  min="1900"
+                  max="2022" />
+              </div>
+              <div class="input-wrapper__item">
+                <p class="error-handler" id="future-error"></p>
+                <input
+                  type="number"
+                  id="future-year"
+                  name="future-year"
+                  placeholder="Enter future year"
+                  min="2023"
+                  max="2200" />
+              </div>
             </div>
             <div class="calculate">
               <input

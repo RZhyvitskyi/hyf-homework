@@ -48,11 +48,18 @@ span {
 }
 
 .input-wrapper {
-  margin-bottom: 2.4rem;
+  margin-bottom: 3.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 3.6rem;
+}
+
+.input-wrapper__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .calculate {
@@ -70,16 +77,6 @@ span {
 
 .year-result {
   color: rgb(0, 114, 51);
-}
-
-.btn {
-  font-weight: 600;
-  background-color: #eee;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #fff;
 }
 
 .bump {
@@ -102,4 +99,30 @@ span {
   100% {
     transform: scale(1);
   }
+}
+
+/* Button Styles -------------------------------------------------------------------- */
+
+.btn {
+  font-weight: 600;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #fff;
+}
+
+/* Error handler styles ------------------------------------------------------------- */
+
+.error-handler {
+  height: 2.4rem;
+  width: 28rem;
+  text-align: center;
+  font-size: 1.8rem;
+  color: rgb(165, 0, 0);
+}
+
+.error-border {
+  border: 1px solid rgb(165, 0, 0);
 }
