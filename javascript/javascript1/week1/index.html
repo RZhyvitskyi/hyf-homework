@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <script defer src="ageIfy.js"></script>
     <script defer src="goodboyOldboy.js"></script>
+    <script defer src="houseyPricey.js"></script>
   </head>
   <body>
     <main>
@@ -93,6 +94,52 @@
             <div class="calculation-result">
               <span>Dog will be: </span>
               <span id="dog-future-year-result" class="year-result"></span>
+            </div>
+          </form>
+        </section>
+
+        <section class="housey-pricey">
+          <form action="#" method="get">
+            <h1>"Is it worth to buy this house?"</h1>
+            <div class="input-wrapper">
+              <div class="input-wrapper__item">
+                <p class="error-handler" id="width-error"></p>
+                <input
+                  type="number"
+                  id="house-width"
+                  name="house-width"
+                  placeholder="Width of the house (m)"
+                  min="1" />
+              </div>
+              <div class="input-wrapper__item">
+                <p class="error-handler" id="height-error"></p>
+                <input
+                  type="number"
+                  id="house-height"
+                  name="house-height"
+                  placeholder="Height of the house (m)"
+                  min="1" />
+              </div>
+              <div class="input-wrapper__item">
+                <p class="error-handler" id="depth-error"></p>
+                <input
+                  type="number"
+                  id="house-depth"
+                  name="house-depth"
+                  placeholder="Depth of the house (m)"
+                  min="1" />
+              </div>
+            </div>
+            <div class="calculate">
+              <input
+                type="submit"
+                value="Calculate"
+                id="calculate-age-ify"
+                class="btn" />
+            </div>
+            <div class="calculation-result">
+              <span>You will be: </span>
+              <span id="future-year-result" class="year-result"></span>
             </div>
           </form>
         </section>
