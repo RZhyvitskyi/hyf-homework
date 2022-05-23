@@ -1,3 +1,41 @@
+// Some calculation for homework
+
+const realPriceForPeterHouse = 8 * 10 * 10 * 2.5 * 1000 + 100 * 300;
+const realPriceForJuliaHouse = 5 * 11 * 8 * 2.5 * 1000 + 70 * 300;
+
+const peterPaid = 2500000;
+const juliaPaid = 1000000;
+
+if (realPriceForPeterHouse > peterPaid) {
+  console.log(
+    `Peter have made a good deal, and saved ${
+      realPriceForPeterHouse - peterPaid
+    }`
+  );
+} else {
+  console.log(
+    `It was a bad deal for Peter, he has lost ${
+      peterPaid - realPriceForPeterHouse
+    }`
+  );
+}
+
+if (realPriceForJuliaHouse > juliaPaid) {
+  console.log(
+    `Julia have made a good deal, and saved ${
+      realPriceForJuliaHouse - juliaPaid
+    }`
+  );
+} else {
+  console.log(
+    `It was a bad deal for Julia, she has lost ${
+      juliaPaid - realPriceForJuliaHouse
+    }`
+  );
+}
+
+// My extra task
+
 // Inputs
 const houseWidthInput = document.getElementById('house-width');
 const houseHeightInput = document.getElementById('house-height');
