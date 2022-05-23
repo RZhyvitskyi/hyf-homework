@@ -1,7 +1,7 @@
 const findNameBtn = document.getElementById('find-name');
 const nameResult = document.getElementById('name-result');
 
-const namesList = [
+const firstWords = [
   'crazy',
   'happy',
   'GetTo',
@@ -14,12 +14,30 @@ const namesList = [
   'build',
 ];
 
+const secondWords = [
+  'earth',
+  'black',
+  'water',
+  'run',
+  'camera',
+  'creative',
+  'future',
+  'blue',
+  'they',
+  'stranger',
+];
+
 findNameBtn.addEventListener('click', (event) => {
   event.preventDefault();
 
-  const randomNumber = Math.floor(Math.random() * 10);
+  const randomFirstNumber = Math.floor(Math.random() * 10);
+  const randomSecondNumber = Math.floor(Math.random() * 10);
 
-  nameResult.textContent = ` "${namesList[randomNumber]}" contains ${namesList[randomNumber].length} characters`;
+  const startupName = `${firstWords[randomFirstNumber]} ${secondWords[randomSecondNumber]}`;
+
+  nameResult.textContent = ` "${startupName}" contains ${
+    startupName.length - 1
+  } characters`;
   nameResult.classList.add('bump');
 
   window.setTimeout(() => {
