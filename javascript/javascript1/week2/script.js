@@ -53,7 +53,7 @@ const getEventWeekday = (remainingDays) => {
 
 getEventWeekday(2);
 
-// Weather wear
+// Weather wear ===================================================================================================
 
 const getClothesForTemperature = (temperature) => {
   if (temperature <= 0) {
@@ -71,7 +71,7 @@ const clothesToWear = getClothesForTemperature(20);
 
 console.log(clothesToWear);
 
-// Student manager
+// Student manager ===============================================================================================
 
 const class22Students = [];
 
@@ -114,7 +114,7 @@ const numberOfStudents = getNumberOfStudents(class22Students);
 console.log(class22Students);
 console.log(`Total number of students is ${numberOfStudents}`);
 
-// Candy helper
+// Candy helper ===============================================================================================
 
 const someAmountInCart = Math.floor(Math.random() * 100);
 
