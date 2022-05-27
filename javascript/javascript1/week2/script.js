@@ -116,10 +116,10 @@ console.log(`Total number of students is ${numberOfStudents}`);
 
 // Candy helper ===============================================================================================
 
-const someAmountInCart = Math.floor(Math.random() * 100);
+const someAmountInCart = Math.floor(Math.random() * 50);
 
 const boughtCandyPrices = [someAmountInCart];
-const amountToSpend = Math.random() * 100;
+const amountToSpend = Math.floor(Math.random() * 100);
 
 const canBuyMoreCandy = (priceList, moneyInWallet) => {
   const totalAmount = priceList.reduce((prev, item) => prev + item, 0);
@@ -132,20 +132,32 @@ const canBuyMoreCandy = (priceList, moneyInWallet) => {
 };
 
 const addCandy = (candyType, weight) => {
+  let candyPrice;
+
   switch (candyType) {
     case 'sweet':
-      boughtCandyPrices.push(0.5 * weight);
+      candyPrice = 0.5 * weight;
       break;
     case 'chocolate':
-      boughtCandyPrices.push(0.7 * weight);
+      candyPrice = 0.7 * weight;
       break;
     case 'toffee':
-      boughtCandyPrices.push(1.1 * weight);
+      candyPrice = 1.1 * weight;
       break;
     case 'chewing-gum':
-      boughtCandyPrices.push(0.03 * weight);
+      candyPrice = 0.03 * weight;
       break;
   }
+
+  const amountToPay =
+    boughtCandyPrices.reduce((prev, item) => prev + item, 0) + candyPrice;
+
+  if (amountToPay > amountToSpend) {
+    console.log(`You don't have enough money to buy this`);
+    return;
+  }
+
+  boughtCandyPrices.push(candyPrice);
 };
 
 addCandy('chocolate', 30);
