@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f9fbfd;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  margin-bottom: 3.6rem;
+  text-align: center;
+  font-size: 3.6rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-bottom: 2.4rem;
+  text-align: center;
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 2.6rem;
+}
+
+p {
+  font-size: 2.4rem;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.input__wrapper {
+  margin-bottom: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.6rem;
+}
+
+.radio__wrapper {
+  margin-bottom: 2.4rem;
+  display: flex;
+  justify-content: center;
+  gap: 3.6rem;
+}
+
+.radio__wrapper input,
+.radio__wrapper label {
+  font-size: 2.4rem;
+}
+
+.radio__wrapper input {
+  margin-right: 1rem;
+}
+
+.text__input,
+.btn {
+  padding: 0.8rem;
+  font-size: 2.4rem;
+}
+
+.btn:hover,
+.btn:active {
+  cursor: pointer;
+}
+
+.text__output {
+  text-align: center;
+}
+
+.error-handler {
+  text-align: center;
+  color: red;
+}
+
+.card {
+  margin-bottom: 2rem;
+  padding: 2.4rem;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.54);
+  border-radius: 10px;
+}
