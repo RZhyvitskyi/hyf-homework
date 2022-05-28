@@ -133,6 +133,6 @@ const renderListTemplate = (listItem) => {
   </li>`;
 };
 
-products.map((item) => {
+products.forEach((item) => {
   root.insertAdjacentHTML('afterbegin', renderListTemplate(item));
 });
