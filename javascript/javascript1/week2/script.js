@@ -9,9 +9,27 @@ console.log(fullName1, fullName2);
 
 // Formal full name
 
-const getFullNameFormal = (firstName, lastName, sex, useFormalName) => {
-  if (firstName === '' || lastName === '') {
-    throw Error('Please make sure you have entered your first and last name');
+const getFullNameFormal = (
+  firstName,
+  lastName,
+  sex = 'male',
+  useFormalName
+) => {
+  if (
+    !firstName ||
+    !lastName ||
+    typeof firstName !== 'string' ||
+    typeof lastName !== 'string'
+  ) {
+    throw Error(
+      'Please make sure you have entered your first and last name (string)'
+    );
+  }
+
+  if (typeof sex !== 'string') {
+    throw Error(
+      'Please make sure you have entered correct sex type (male, female ot other)'
+    );
   }
 
   if (useFormalName) {
@@ -76,7 +94,7 @@ console.log(clothesToWear);
 const class22Students = [];
 
 function addStudentToClass(studentName) {
-  if (studentName === '') {
+  if (studentName === '' || studentName === undefined) {
     console.log(`Student name can't be empty`);
     return;
   } else if (class22Students.includes(studentName)) {
@@ -97,7 +115,7 @@ function addStudentToClass(studentName) {
 function getNumberOfStudents(studentList) {
   return studentList.length;
 }
-
+addStudentToClass();
 addStudentToClass('Natasha');
 addStudentToClass('Petro');
 addStudentToClass('Natasha');
@@ -115,10 +133,7 @@ console.log(class22Students);
 console.log(`Total number of students is ${numberOfStudents}`);
 
 // Candy helper ===============================================================================================
-
-const someAmountInCart = Math.floor(Math.random() * 50);
-
-const boughtCandyPrices = [someAmountInCart];
+const boughtCandyPrices = [];
 const amountToSpend = Math.floor(Math.random() * 100);
 
 const canBuyMoreCandy = (priceList, moneyInWallet) => {
@@ -153,14 +168,16 @@ const addCandy = (candyType, weight) => {
     boughtCandyPrices.reduce((prev, item) => prev + item, 0) + candyPrice;
 
   if (amountToPay > amountToSpend) {
-    console.log(`You don't have enough money to buy this`);
+    console.log(
+      `You don't have enough money to buy this, please buy less candies`
+    );
     return;
   }
 
   boughtCandyPrices.push(candyPrice);
 };
 
-addCandy('chocolate', 30);
+addCandy('chocolate', 80);
 
 canBuyMoreCandy(boughtCandyPrices, amountToSpend)
   ? console.log('You can buy more, so please do!')
