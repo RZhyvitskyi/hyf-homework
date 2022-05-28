@@ -9,12 +9,7 @@ console.log(fullName1, fullName2);
 
 // Formal full name
 
-const getFullNameFormal = (
-  firstName,
-  lastName,
-  sex = 'male',
-  useFormalName
-) => {
+const getFullNameFormal = (firstName, lastName, sex, useFormalName) => {
   if (
     !firstName ||
     !lastName ||
