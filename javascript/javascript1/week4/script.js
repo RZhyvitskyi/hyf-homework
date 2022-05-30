@@ -13,7 +13,10 @@ const userRequestSetTimer = ['Set', 'a', 'timer', 'for', 'minutes'];
 const userRequestMood = ['How', 'is', 'your', 'mood', 'today?'];
 
 const findDifferenceBetweenReqAndRes = (request, possibleReq) => {
-  return request.filter((item) => !possibleReq.includes(item)).join(' ');
+  return request
+    .filter((item) => item)
+    .filter((item) => !possibleReq.includes(item))
+    .join(' ');
 };
 
 const checkForSimilarity = (userRequest, possibleRequest) => {
@@ -26,13 +29,13 @@ const getReply = (command) => {
   if (checkForSimilarity(userCommand, userNameIntro)) {
     userName = findDifferenceBetweenReqAndRes(userCommand, userNameIntro);
 
-    if (userName[0] === '' || userName.length === 0) {
+    if (!userName) {
       return console.log('Please enter your name');
     } else return console.log(`nice to meet you ${userName}`);
   }
 
   if (checkForSimilarity(userCommand, userNameRequest)) {
-    if (userName === undefined || userName.length === 0 || userName[0] === '') {
+    if (!userName) {
       return console.log('User name is not set');
     } else {
       return console.log(`Your name is ${userName}`);
@@ -80,7 +83,11 @@ const getReply = (command) => {
       userRequestCalculation
     );
 
-    return console.log(eval(itemToCalculate));
+    if (!itemToCalculate) {
+      return console.log('You have nothing to calculate');
+    } else {
+      return console.log(eval(itemToCalculate));
+    }
   }
 
   if (checkForSimilarity(userCommand, userRequestSetTimer)) {
@@ -115,7 +122,7 @@ const getReply = (command) => {
   }
 };
 
-getReply('Hello my name is Benjamin');
+getReply('Hello my name is    Benjamin');
 getReply('What is my name');
 getReply('Add fishing to my todo');
 getReply('Add singing in the shower to my todo');
@@ -124,5 +131,6 @@ getReply('Remove fishing from my todo');
 getReply('What is on my todo');
 getReply('What day is it today?');
 getReply('What is 3 * 3');
+getReply('What is');
 getReply('Set a timer for 4 minutes');
 getReply('How is your mood today?');
