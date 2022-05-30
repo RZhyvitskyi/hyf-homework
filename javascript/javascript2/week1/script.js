@@ -4,8 +4,7 @@ const danishWords = ['bil', 'plante', 'kaffe', 'bog', 'ø', 'planetarium'];
 
 const findShortestWord = (listOfWords) => {
   return listOfWords.reduce(
-    (prev, current, index, array) =>
-      current.length < prev.length ? current : prev,
+    (prev, current) => (current.length < prev.length ? current : prev),
     listOfWords[0]
   );
 };
@@ -78,7 +77,7 @@ const spiritAnimalNameGenerator = () => {
   errorHandler.textContent = '';
   const userName = userNameInput.value;
 
-  if (userName === '') {
+  if (!userName) {
     errorHandler.textContent = 'Please enter a user name';
     return;
   }
