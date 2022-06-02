@@ -152,7 +152,6 @@ const shipsToHandler = () => {
 renderProducts(productFilteredByCountry);
 
 // Listeners =============================================================
-let filteredList = productsSorted;
 
 searchInput.addEventListener('keyup', filterListHandler);
 maxPriceInput.addEventListener('keyup', filterListHandler);
