@@ -81,10 +81,14 @@ const getReply = (command) => {
     const itemToCalculate = findDifferenceBetweenReqAndRes(
       userCommand,
       userRequestCalculation
-    );
+    )
+      .split(' ')
+      .join('');
 
     if (!itemToCalculate) {
       return console.log('You have nothing to calculate');
+    } else if (itemToCalculate.length <= 2) {
+      return console.log(`${itemToCalculate} is not a mathematical expression`);
     } else {
       return console.log(eval(itemToCalculate));
     }
