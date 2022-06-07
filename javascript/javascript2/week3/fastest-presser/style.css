@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 40px 0;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 64px;
+}
+
+input {
+  padding: 5px;
+  font-size: 24px;
+}
+
+button {
+  padding: 10px;
+  font-size: 20px;
+  background-color: rgb(2, 165, 2);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover,
+button:active {
+  background-color: rgb(10, 190, 10);
+}
+
+.set-up {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.game-field {
+  height: 30vh;
+  display: flex;
+  border-top: 1px solid #000;
+}
+
+.game-field__left,
+.game-field__right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.game-field__left {
+  border-right: 1px solid #000;
+}
