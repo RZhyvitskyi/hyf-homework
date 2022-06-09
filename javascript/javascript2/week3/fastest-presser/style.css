@@ -48,6 +48,7 @@ button:active {
 
 .game-field {
   height: 30vh;
+  margin-bottom: 40px;
   display: flex;
   border-top: 1px solid #000;
 }
@@ -63,4 +64,11 @@ button:active {
 
 .game-field__left {
   border-right: 1px solid #000;
+}
+
+.winner {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 36px;
+  color: rgb(10, 190, 10);
 }
