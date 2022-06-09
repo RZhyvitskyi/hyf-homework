@@ -37,6 +37,8 @@ const makeAfterTimeout = () => {
     winner.textContent = `Winner Left`;
   } else if (keySPressedAmount < keyLPressedAmount) {
     winner.textContent = `Winner Right`;
+  } else if (!keySPressedAmount && !keyLPressedAmount) {
+    winner.textContent = `None of the players press any key`;
   } else {
     winner.textContent = `It's a draw!`;
   }
