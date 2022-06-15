@@ -1,0 +1,12 @@
+.city-input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 2rem;
+  border: none;
+  border-radius: 10px;
+}
+
+.city-input:focus {
+  outline: none;
+  background-color: #fff;
+}

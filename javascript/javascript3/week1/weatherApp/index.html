@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>JS3 Week1</title>
+  </head>
+  <body>
+    <header>
+      <div class="container padding-small"><h1>City weather</h1></div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="city-weather padding-xsmall">
+          <div class="city-search">
+            <input id="city" class="city-input" type="text" />
+            <button id="city-btn" class="btn btn-insider">Show weather</button>
+          </div>
+          <div class="weather-data" id="api-output"></div>
+        </section>
+        <section class="your-location-weather padding-xsmall">
+          <h2>Your location weather</h2>
+          <div id="location-weather" class="weather-data"></div>
+        </section>
+        <section class="last-viewed-weather padding-xsmall">
+          <h2>Last viewed weather</h2>
+          <div id="last-location-weather" class="weather-data"></div>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
+  </body>
+</html>

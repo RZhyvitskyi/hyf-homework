@@ -1,0 +1,20 @@
+.btn {
+  padding: 0.8rem;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+}
+
+.btn:active {
+  background-color: #ddd;
+}
+
+.btn-insider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  border-left: 1px solid #ccc;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
