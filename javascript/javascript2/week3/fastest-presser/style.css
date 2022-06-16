@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 40px 0;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 64px;
+}
+
+input {
+  padding: 5px;
+  font-size: 24px;
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  font-size: 20px;
+  background-color: rgb(2, 165, 2);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover,
+button:active {
+  background-color: rgb(10, 190, 10);
+}
+
+.set-up {
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  color: rgb(248, 18, 56);
+}
+
+.game-field {
+  height: 30vh;
+  margin-bottom: 40px;
+  display: flex;
+  border-top: 1px solid #000;
+}
+
+.game-field__left,
+.game-field__right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.game-field__left {
+  border-right: 1px solid #000;
+}
+
+.time-count-down {
+  width: 50px;
+  height: 50px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(2, 165, 2);
+}
+
+.winner {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 36px;
+  color: rgb(10, 190, 10);
+}
+
+.active {
+  display: flex;
+}

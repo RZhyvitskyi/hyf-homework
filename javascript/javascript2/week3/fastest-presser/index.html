@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Fastest presser</title>
+  </head>
+  <body>
+    <div class="container">
+      <header><h1>Fastest presser</h1></header>
+      <div class="set-up">
+        <input id="game-duration" type="number" />
+        <p class="error" id="error"></p>
+        <button id="game-start">Start Game!</button>
+        <div class="time-count-down" id="time-count-down"></div>
+      </div>
+      <div class="game-field">
+        <div class="game-field__left">
+          <p>Press S:</p>
+          <span id="player-one"></span>
+        </div>
+        <div class="game-field__right">
+          <p>Press L:</p>
+          <span id="player-two"></span>
+        </div>
+      </div>
+      <div class="winner">
+        <p class="winner" id="winner"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
