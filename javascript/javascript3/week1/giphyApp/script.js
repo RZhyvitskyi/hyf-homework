@@ -4,16 +4,28 @@ const searchBtn = document.getElementById('search-btn');
 const gifList = document.getElementById('gif-list');
 
 const gifTemplate = (gifUrl, gifTitle) => {
-  return `<li class="gif__item">
-    <img src="${gifUrl}" alt="${gifTitle}" class="gif__img" />
-  </li>`;
+  const listItem = document.createElement('li');
+  const listImg = document.createElement('img');
+
+  listItem.className = 'gif__item';
+  listImg.className = 'gif__img';
+  listImg.src = gifUrl;
+  listImg.alt = gifTitle;
+
+  listItem.appendChild(listImg);
+
+  return listItem;
 };
 
 const renderGifList = (gifList, output) => {
+  const listFragment = document.createDocumentFragment();
+
   gifList.forEach((gif) => {
     const gifItem = gifTemplate(gif.images.downsized.url, gif.title);
-    output.insertAdjacentHTML('afterbegin', gifItem);
+    listFragment.appendChild(gifItem);
   });
+
+  output.appendChild(listFragment);
 };
 
 const gifNumberEventHandler = (gifData, gifList) => {
@@ -22,11 +34,16 @@ const gifNumberEventHandler = (gifData, gifList) => {
   if (/^[0-9]+$/.test(newGifLimit)) {
     gifList.innerHTML = '';
 
-    const newGifArray = gifData.data.slice(-newGifLimit);
+    const newGifArray = gifData.data.slice(0, newGifLimit);
 
     renderGifList(newGifArray, gifList);
   } else {
-    return;
+    if (!newGifLimit) {
+      gifList.innerHTML = '';
+      renderGifList(gifData.data, gifList);
+    } else {
+      return;
+    }
   }
 };
 

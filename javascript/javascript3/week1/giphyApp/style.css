@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .container {
@@ -12,10 +18,11 @@
 header {
   padding: 40px 0;
   text-align: center;
+  font-family: 'Satisfy', cursive;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 56px;
 }
 
 form {
@@ -28,5 +35,46 @@ form {
 input,
 button {
   padding: 8px;
-  font-size: 24px;
+  font-size: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px -5px #000000;
+}
+
+input {
+  border: 1px solid #ccc;
+}
+
+button {
+  border: none;
+  color: #fff;
+  background-color: #40c057;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #51cf66;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.gif__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.gif__item {
+  padding: 10px;
+  width: 300px;
+  box-shadow: 0px 0px 10px -5px #000000;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.gif__item img {
+  width: 100%;
+  display: block;
 }
