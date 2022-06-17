@@ -37,11 +37,11 @@ body {
   margin: 0 auto;
 }
 
-.padding-xsmall {
+.padding_xsmall {
   padding: 1.2rem;
 }
 
-.padding-small {
+.padding_small {
   padding: 2.4rem;
 }
 
@@ -49,7 +49,7 @@ body {
   display: flex;
 }
 
-.align-items-c {
+.align-items_c {
   align-items: center;
 }
 

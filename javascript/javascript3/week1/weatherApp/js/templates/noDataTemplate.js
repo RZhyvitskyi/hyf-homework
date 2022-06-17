@@ -1,5 +1,5 @@
 const noDataTemplate = (noDataMessage) => {
-  return `<div class="weather-wrapper">
+  return `<div class="weather__wrapper">
     <p class="error">${noDataMessage}</p>
   </div>`;
 };

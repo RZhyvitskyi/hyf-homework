@@ -9,24 +9,30 @@
   </head>
   <body>
     <header>
-      <div class="container padding-small"><h1>City weather</h1></div>
+      <div class="container padding_small"><h1>City weather</h1></div>
     </header>
     <main>
       <div class="container">
-        <section class="city-weather padding-xsmall">
-          <div class="city-search">
-            <input id="city" class="city-input" type="text" />
-            <button id="city-btn" class="btn btn-insider">Show weather</button>
-          </div>
-          <div class="weather-data" id="api-output"></div>
+        <section class="city-weather padding_xsmall">
+          <form class="city__search">
+            <input
+              id="city"
+              class="city__input"
+              type="text"
+              placeholder="Enter a city name" />
+            <button type="submit" id="city-btn" class="btn btn_insider">
+              Show weather
+            </button>
+          </form>
+          <div class="weather__data" id="api-output"></div>
         </section>
-        <section class="your-location-weather padding-xsmall">
+        <section class="your-location__weather padding_xsmall">
           <h2>Your location weather</h2>
-          <div id="location-weather" class="weather-data"></div>
+          <div id="location-weather" class="weather__data"></div>
         </section>
-        <section class="last-viewed-weather padding-xsmall">
+        <section class="last-viewed__weather padding_xsmall">
           <h2>Last viewed weather</h2>
-          <div id="last-location-weather" class="weather-data"></div>
+          <div id="last-location-weather" class="weather__data"></div>
         </section>
       </div>
     </main>

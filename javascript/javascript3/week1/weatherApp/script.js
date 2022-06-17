@@ -55,11 +55,6 @@ const getCurrentPosition = () => {
 const renderCurrentPositionWeather = async () => {
   try {
     const { coords } = await getCurrentPosition();
-    // const coords = {
-    //   latitude: 50.450001,
-    //   longitude: 30.523333,
-    // };
-
     const apiUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${coords.latitude}&lon=${coords.longitude}&limit=1&appid=57640a906412f62664b0e76848661320`;
     const apiResponse = await fetch(apiUrl);
     const cityName = await apiResponse.json();
@@ -96,12 +91,13 @@ const renderLastLocationWeather = () => {
   }
 };
 
-const btnListenerHandler = async () => {
+const btnListenerHandler = async (e) => {
+  e.preventDefault();
   output.innerHTML = '';
   const cityName = cityInput.value.trim().toLowerCase();
 
   if (!cityName) {
-    return (output.innerHTML = `<p class='error'>Please enter a city name</p>`);
+    return (output.innerHTML = noDataTemplate('Please enter a city name</p>'));
   }
 
   try {

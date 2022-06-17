@@ -1,4 +1,4 @@
-.weather-wrapper {
+.weather__wrapper {
   padding: 1rem;
 
   border-radius: 1rem;
@@ -6,33 +6,33 @@
   background: #fff;
 }
 
-.weather-content {
+.weather__content {
   display: grid;
   grid-template-columns: 50% 50%;
   align-items: center;
   justify-items: center;
 }
 
-.weather-wrapper span {
+.weather__wrapper span {
   font-size: 1.4rem;
 }
 
-.temperature-wrapper {
+.temperature__wrapper {
   transform: translateX(-10px);
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
 
-.weather-icon {
+.weather__icon {
   grid-row: 1 / span 2;
 }
 
-.weather-icon img {
+.weather__icon img {
   max-width: 8rem;
 }
 
-.weather-wrapper .temperature {
+.weather__wrapper .temperature {
   text-align: center;
   font-size: 1.6rem;
 }
@@ -41,13 +41,13 @@
   justify-self: center;
 }
 
-.temperature-system {
+.temperature__system {
   opacity: 0;
   position: fixed;
   width: 0;
 }
 
-.temperature-label {
+.temperature__label {
   margin: 0 0.4rem;
   display: inline-block;
   padding: 0.8rem;
@@ -65,7 +65,7 @@
   color: #000;
 }
 
-.searched-city {
+.searched__city {
   justify-self: center;
   align-self: center;
   font-size: 2.2rem;
@@ -99,18 +99,18 @@
 }
 
 @media screen and (min-width: 750px) {
-  .weather-content {
+  .weather__content {
     grid-template-columns: repeat(9, calc(100% / 9));
   }
 
-  .temperature-wrapper {
+  .temperature__wrapper {
     grid-row: 2;
     grid-column: 1 / span 2;
   }
 
-  .searched-city {
+  .searched__city {
     padding: 1rem;
-    grid-column: 4 / span 3;
+    grid-column: 1 / span 4;
   }
 
   .more-info {
@@ -121,7 +121,7 @@
   .map {
     height: 20rem;
     width: 100%;
-    grid-row: 2;
+    grid-row: 1 / span 2;
     grid-column: 5 / span 5;
   }
 }
