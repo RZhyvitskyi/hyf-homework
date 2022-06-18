@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>JS3 week1 GiphyApp</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Giphy searcher</h1>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="search">
+          <form>
+            <input id="gif-name" type="text" placeholder="Search for gif" />
+            <button id="search-btn">Search for gif</button>
+            <input
+              id="gifs-number"
+              type="number"
+              placeholder="Number of gifs" />
+          </form>
+        </section>
+        <section class="output">
+          <ul id="gif-list" class="gif__list"></ul>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
