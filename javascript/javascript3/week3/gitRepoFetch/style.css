@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 40px;
+  padding: 20px 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.git-users__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.git-users__list > li {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.git-users__list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.git-users__list ul li {
+  display: flex;
+  justify-content: space-between;
+}
+
+a:visited,
+a:link {
+  color: rgb(51, 120, 247);
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
