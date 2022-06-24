@@ -7,7 +7,6 @@ const userName = document.getElementById('user-name');
 const totalPrice = document.getElementById('total-price');
 const searchInput = document.getElementById('search-input');
 const searchList = document.getElementById('search-list');
-const blanketOnSearch = document.getElementById('blanket');
 const productPopup = document.getElementById('product-popup');
 
 const shoppingCart = new ShoppingCart(shoppingList);
@@ -30,9 +29,10 @@ let productToAdd;
   shoppingCart.renderProducts();
   totalPrice.innerHTML = `Total price: ${shoppingCart.getTotal()}`;
 
+  // Functions --------------------------------------------------------------------------
+
   const searchProduct = async (e) => {
     const searchValue = searchInput.value.toLowerCase().trim();
-    blanketOnSearch.classList.add('blanket_active');
 
     if (searchValue) {
       const filteredProducts = await productSearchDB.searchProduct(searchValue);
@@ -40,21 +40,21 @@ let productToAdd;
       searchList.classList.add('search__list_active');
     } else {
       searchList.classList.remove('search__list_active');
-      blanketOnSearch.classList.remove('blanket_active');
     }
   };
 
   const closeSearchList = () => {
     searchList.classList.remove('search__list_active');
-    blanketOnSearch.classList.remove('blanket_active');
   };
 
-  searchInput.addEventListener('keyup', searchProduct);
-  window.addEventListener('click', (e) => {
+  const windowListener = (e) => {
     const parentTarget = e.target.parentElement;
 
-    if (!parentTarget.classList.contains('search__item')) {
-      closeSearchList();
+    if (parentTarget.classList.contains('product__img')) {
+      const productId = +parentTarget.dataset.img;
+
+      productToAdd = shoppingCart.renderProductInfo(productId, productPopup);
+      productPopup.classList.add('popup_active');
     } else if (parentTarget.classList.contains('search__item')) {
       const productId = parentTarget.dataset.search;
 
@@ -64,10 +64,12 @@ let productToAdd;
       );
       productPopup.classList.add('popup_active');
       closeSearchList();
+    } else if (!parentTarget.classList.contains('search__item')) {
+      closeSearchList();
     }
-  });
+  };
 
-  productPopup.addEventListener('click', (e) => {
+  const popupListener = (e) => {
     if (
       (e.target.classList.contains('product__popup') &&
         productPopup.classList.contains('popup_active')) ||
@@ -79,8 +81,12 @@ let productToAdd;
       shoppingCart.addProduct(newProduct);
       shoppingCart.renderProducts();
       changeProductAmount(newProduct, 'increaseAmount');
+      productSearchDB.renderAddedProduct(newProduct, productPopup);
+      setTimeout(() => {
+        productPopup.classList.remove('popup_active');
+      }, 2000);
     }
-  });
+  };
 
   const changeProductAmount = (productToChange, changingAction) => {
     const amountInput = document.querySelector(
@@ -97,8 +103,7 @@ let productToAdd;
     totalPrice.innerHTML = `Total price: ${shoppingCart.getTotal()}`;
   };
 
-  // I'm so sorry for this code, just let me to make it on ReactJS.
-  shoppingList.addEventListener('click', (e) => {
+  const shoppingListListener = (e) => {
     const parentTarget = e.target.parentElement;
 
     if (parentTarget.classList.contains('btn_delete')) {
@@ -110,5 +115,11 @@ let productToAdd;
     } else if (parentTarget.classList.contains('arrow-right')) {
       changeProductAmount(parentTarget.dataset, 'increaseAmount');
     }
-  });
+  };
+
+  // Listeners ----------------------------------------------------------------
+  searchInput.addEventListener('keyup', searchProduct);
+  window.addEventListener('click', windowListener);
+  productPopup.addEventListener('click', popupListener);
+  shoppingList.addEventListener('click', shoppingListListener);
 })();

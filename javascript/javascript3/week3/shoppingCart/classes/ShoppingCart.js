@@ -38,7 +38,7 @@ export default class ShoppingCart {
 
     const productsHtmlList = productsArray.map((product) => {
       return `<li class="product__item">
-        <div class="product__img">
+        <div class="product__img" data-img="${product.id}">
           <img src="./img/${product.name}.jpg" alt="${product.name}">
         </div>
         <h3>${product.name}</h3>
@@ -51,7 +51,7 @@ export default class ShoppingCart {
             <img src="./img/icons/right-arrow.png" alt="right-arrow">
           </div>
         </div>
-        <p data-price="${product.id}">${product.price} DKK</p>
+        <p data-price="${product.id}" class="product__price">${product.price} DKK</p>
         <button data-id="${product.id}" class="btn btn_delete">
           <img src="./img/icons/delete.png" alt="delete">
         </button>
@@ -59,6 +59,28 @@ export default class ShoppingCart {
     });
 
     this.renderField.innerHTML = productsHtmlList.join('');
+  }
+
+  renderProductInfo(productId, productPopup) {
+    const productIndex = this.products.findIndex(
+      (item) => item.id == productId
+    );
+    const product = this.products[productIndex];
+
+    productPopup.innerHTML = `<div class="container popup__container">
+      <button class="btn_close">
+        <img src="./img/icons/close.png">
+      </button>
+      <h3>${product.name}</h3>
+      <div class="popup__img">
+        <img src="./img/${product.name}.jpg" alt="${product.name}">
+      </div>
+      <p class="popup__description">${product.description}</p>
+      <p class="popup__price">${product.price} DKK</p>
+      <button class="btn_add" data-popupId="${product.id}">Add to cart</button>
+    </div>`;
+
+    return product;
   }
 
   async getUser(user) {

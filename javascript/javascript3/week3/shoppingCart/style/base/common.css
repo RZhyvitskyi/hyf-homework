@@ -27,6 +27,10 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  color: #333;
+}
+
 img {
   width: 100%;
 }

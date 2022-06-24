@@ -6,6 +6,4 @@ export default class Product {
     this.id = id;
     this.amount = amount;
   }
-
-  convertToCurrency(currency) {}
 }

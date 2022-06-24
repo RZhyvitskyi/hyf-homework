@@ -46,6 +46,13 @@
   line-height: 1.4;
 }
 
+.popup__price {
+  padding: 0.4rem;
+  display: inline-block;
+  font-size: 3.6rem;
+  font-family: 'Indie Flower', cursive;
+}
+
 .btn_close {
   width: 30px;
   padding: 0;
@@ -59,6 +66,15 @@
 
 .btn_add {
   font-size: 2rem;
+  text-transform: uppercase;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.btn_add:hover {
+  box-shadow: 0px 2px 0px 0px #333;
 }
 
 @media screen and (min-width: 650px) {

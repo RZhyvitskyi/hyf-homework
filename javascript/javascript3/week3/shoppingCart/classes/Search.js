@@ -51,4 +51,10 @@ export default class Search {
 
     return product;
   }
+
+  renderAddedProduct(product, productPopup) {
+    productPopup.innerHTML = `<div class="container popup__container">
+      <h3>${product.name} is added to your shopping cart</h3> 
+    </div>`;
+  }
 }
