@@ -4,6 +4,6 @@
 @import './style/base/common.css';
 
 @import './style/components/product-in-list.css';
-
+@import './style/components/popup.css';
 @import './style/layout/header.css';
 @import './style/layout/main.css';

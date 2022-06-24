@@ -45,7 +45,6 @@ header h1 {
 }
 
 .search__item {
-  padding: 1rem;
   cursor: pointer;
 }
 
@@ -60,9 +59,7 @@ header h1 {
 
 .search__item p,
 .search__error p {
-  font-size: 2rem;
-}
-
-.search__error {
   padding: 1rem;
+  display: block;
+  font-size: 2rem;
 }

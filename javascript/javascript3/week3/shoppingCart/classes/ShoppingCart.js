@@ -1,25 +1,23 @@
 export default class ShoppingCart {
-  constructor(renderField, searchResultField) {
+  constructor(renderField) {
     this.products = [];
     this.renderField = renderField;
-    this.searchResultField = searchResultField;
   }
 
   addProduct(product) {
-    this.products.push(product);
+    const coincidenceArray = this.products.filter(
+      (item) => item.name === product.name
+    );
+
+    if (coincidenceArray.length > 0) {
+      return;
+    } else {
+      this.products.push(product);
+    }
   }
 
   removeProduct(productId) {
     this.products = this.products.filter((item) => item.id !== productId);
-  }
-
-  async searchProduct(productName) {
-    const productDBRequest = await fetch('./productDB.json');
-    const productDB = await productDBRequest.json();
-
-    return productDB.products.filter((item) =>
-      item.name.toLowerCase().includes(productName)
-    );
   }
 
   getTotal() {
@@ -41,7 +39,7 @@ export default class ShoppingCart {
     const productsHtmlList = productsArray.map((product) => {
       return `<li class="product__item">
         <div class="product__img">
-          <img src="./img/${product.id}.jpg" alt="${product.name}">
+          <img src="./img/${product.name}.jpg" alt="${product.name}">
         </div>
         <h3>${product.name}</h3>
         <div class="product__amount">
@@ -54,28 +52,13 @@ export default class ShoppingCart {
           </div>
         </div>
         <p data-price="${product.id}">${product.price} DKK</p>
-        <button data-id="${product.id}" class="btn btn-delete">
+        <button data-id="${product.id}" class="btn btn_delete">
           <img src="./img/icons/delete.png" alt="delete">
         </button>
       </li>`;
     });
 
     this.renderField.innerHTML = productsHtmlList.join('');
-  }
-
-  renderSearchedProducts(productList) {
-    if (productList.length === 0) {
-      this.searchResultField.innerHTML = `<li class="search__error"><p>No products found<p></li>`;
-      return;
-    }
-
-    const searchList = productList.map((product) => {
-      return `<li class="search__item" data-searchId="${product.id}">
-        <p class="search__name">${product.name}</p>
-      </li>`;
-    });
-
-    this.searchResultField.innerHTML = searchList.join('');
   }
 
   async getUser(user) {

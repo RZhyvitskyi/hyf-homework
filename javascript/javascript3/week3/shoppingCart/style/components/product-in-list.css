@@ -50,11 +50,12 @@ input::-webkit-inner-spin-button {
   width: 20px;
 }
 
-.btn-delete {
+.btn_delete {
   width: 40px;
   position: absolute;
   top: 10px;
   right: 0;
   border: none;
   background-color: #fff;
+  cursor: pointer;
 }
