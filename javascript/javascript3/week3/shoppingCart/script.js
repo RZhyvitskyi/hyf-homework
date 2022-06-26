@@ -63,6 +63,7 @@ let productToAdd;
 
       productToAdd = shoppingCart.renderProductInfo(productId, productPopup);
       productPopup.classList.add('popup_active');
+      document.body.style.overflow = 'hidden';
     } else if (parentTarget.classList.contains('search__item')) {
       const productId = parentTarget.dataset.search;
 
@@ -72,6 +73,7 @@ let productToAdd;
       );
       productPopup.classList.add('popup_active');
       closeSearchList();
+      document.body.style.overflow = 'hidden';
     } else if (!parentTarget.classList.contains('search__item')) {
       closeSearchList();
     }
@@ -84,6 +86,7 @@ let productToAdd;
       e.target.parentElement.classList.contains('btn_close')
     ) {
       productPopup.classList.remove('popup_active');
+      document.body.style.overflow = 'scroll';
     } else if (e.target.classList.contains('btn_add')) {
       const newProduct = new Product({ ...productToAdd, amount: 0 });
       shoppingCart.addProduct(newProduct);
@@ -93,6 +96,7 @@ let productToAdd;
       setTimeout(() => {
         productPopup.classList.remove('popup_active');
       }, 2000);
+      document.body.style.overflow = 'scroll';
     }
   };
 
