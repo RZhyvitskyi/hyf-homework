@@ -1,7 +1,8 @@
 export default class Search {
-  constructor(searchResultField) {
+  constructor(searchResultField, currency) {
     this.searchResultField = searchResultField;
     this.searchedList = [];
+    this.currency = currency;
   }
 
   async searchProduct(productName) {
@@ -35,6 +36,10 @@ export default class Search {
       (item) => item.id == productId
     );
     const product = this.searchedList[productIndex];
+    const myCurrency = this.currency;
+    const priceAfterCurrencyCheck = parseFloat(
+      (product.price * myCurrency.coefficient).toFixed(1)
+    );
 
     productPopup.innerHTML = `<div class="container popup__container">
       <button class="btn_close">
@@ -45,7 +50,7 @@ export default class Search {
         <img src="./img/${product.name}.jpg" alt="${product.name}">
       </div>
       <p class="popup__description">${product.description}</p>
-      <p class="popup__price">${product.price} DKK</p>
+      <p class="popup__price">${priceAfterCurrencyCheck} ${myCurrency.currency}</p>
       <button class="btn_add" data-popupId="${product.id}">Add to cart</button>
     </div>`;
 
@@ -53,7 +58,7 @@ export default class Search {
   }
 
   renderAddedProduct(product, productPopup) {
-    productPopup.innerHTML = `<div class="container popup__container">
+    productPopup.innerHTML = `<div class="container popup__container popup_added">
       <h3>${product.name} is added to your shopping cart</h3> 
     </div>`;
   }

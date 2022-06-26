@@ -8,9 +8,17 @@ const totalPrice = document.getElementById('total-price');
 const searchInput = document.getElementById('search-input');
 const searchList = document.getElementById('search-list');
 const productPopup = document.getElementById('product-popup');
+const dkk = document.getElementById('currency-denmark');
+const nok = document.getElementById('currency-norway');
+const sek = document.getElementById('currency-sweden');
 
-const shoppingCart = new ShoppingCart(shoppingList);
-const productSearchDB = new Search(searchList);
+const denmarkCoefficient = { coefficient: 1, currency: 'DKK' };
+const norwayCoefficient = { coefficient: 1.4, currency: 'NOK' };
+const swedenCoefficient = { coefficient: 1.44, currency: 'SEK' };
+let currentCurrency = denmarkCoefficient;
+
+let shoppingCart = new ShoppingCart(shoppingList, currentCurrency);
+let productSearchDB = new Search(searchList, currentCurrency);
 
 let productToAdd;
 
@@ -99,7 +107,9 @@ let productToAdd;
     const productId = productToChange.id;
     const product = shoppingCart[changingAction](productId);
     amountInput.value = product.amount;
-    priceOutput.innerHTML = `${product.amount * product.price} DKK`;
+    priceOutput.innerHTML = `${parseFloat(
+      (product.amount * product.price).toFixed(1)
+    )} ${currentCurrency.currency}`;
     totalPrice.innerHTML = `Total price: ${shoppingCart.getTotal()}`;
   };
 
@@ -117,7 +127,42 @@ let productToAdd;
     }
   };
 
+  const changeCurrency = () => {
+    shoppingCart = new ShoppingCart(shoppingList, currentCurrency);
+    productSearchDB = new Search(searchList, currentCurrency);
+
+    cartProductsList.forEach((product) => shoppingCart.addProduct(product));
+    shoppingCart.renderProducts();
+    totalPrice.innerHTML = `Total price: ${shoppingCart.getTotal()}`;
+  };
+
+  const changeCurrencyStyle = (currentCurrency, oldCurrency) => {
+    currentCurrency.classList.add('currency_active');
+    oldCurrency.classList.remove('currency_active');
+  };
+
   // Listeners ----------------------------------------------------------------
+  dkk.addEventListener('click', () => {
+    currentCurrency = denmarkCoefficient;
+    changeCurrency();
+    const oldCurrency = document.querySelector('.currency_active');
+    changeCurrencyStyle(dkk, oldCurrency);
+  });
+
+  nok.addEventListener('click', () => {
+    currentCurrency = norwayCoefficient;
+    changeCurrency();
+    const oldCurrency = document.querySelector('.currency_active');
+    changeCurrencyStyle(nok, oldCurrency);
+  });
+
+  sek.addEventListener('click', () => {
+    currentCurrency = swedenCoefficient;
+    changeCurrency();
+    const oldCurrency = document.querySelector('.currency_active');
+    changeCurrencyStyle(sek, oldCurrency);
+  });
+
   searchInput.addEventListener('keyup', searchProduct);
   window.addEventListener('click', windowListener);
   productPopup.addEventListener('click', popupListener);

@@ -1,7 +1,8 @@
 export default class ShoppingCart {
-  constructor(renderField) {
+  constructor(renderField, currency) {
     this.products = [];
     this.renderField = renderField;
+    this.currency = currency;
   }
 
   addProduct(product) {
@@ -9,10 +10,17 @@ export default class ShoppingCart {
       (item) => item.name === product.name
     );
 
+    const myCurrency = this.currency.coefficient;
+
     if (coincidenceArray.length > 0) {
       return;
     } else {
-      this.products.push(product);
+      const currentPrice = parseFloat((product.price * myCurrency).toFixed(1));
+
+      this.products.push({
+        ...product,
+        price: currentPrice,
+      });
     }
   }
 
@@ -21,14 +29,17 @@ export default class ShoppingCart {
   }
 
   getTotal() {
-    return this.products.reduce(
+    const totalPrice = this.products.reduce(
       (total, product) => total + product.price * product.amount,
       0
     );
+
+    return parseFloat(totalPrice.toFixed(1));
   }
 
   renderProducts(productsArray = this.products) {
     this.renderField.innerHTML = '';
+    const myCurrency = this.currency;
 
     const emptyList = `<li class="product__item product_error"><p>Shopping card is empty</p></li>`;
 
@@ -51,7 +62,7 @@ export default class ShoppingCart {
             <img src="./img/icons/right-arrow.png" alt="right-arrow">
           </div>
         </div>
-        <p data-price="${product.id}" class="product__price">${product.price} DKK</p>
+        <p data-price="${product.id}" class="product__price">${product.price} ${myCurrency.currency}</p>
         <button data-id="${product.id}" class="btn btn_delete">
           <img src="./img/icons/delete.png" alt="delete">
         </button>
@@ -66,6 +77,7 @@ export default class ShoppingCart {
       (item) => item.id == productId
     );
     const product = this.products[productIndex];
+    const myCurrency = this.currency;
 
     productPopup.innerHTML = `<div class="container popup__container">
       <button class="btn_close">
@@ -76,7 +88,7 @@ export default class ShoppingCart {
         <img src="./img/${product.name}.jpg" alt="${product.name}">
       </div>
       <p class="popup__description">${product.description}</p>
-      <p class="popup__price">${product.price} DKK</p>
+      <p class="popup__price">${product.price} ${myCurrency.currency}</p>
       <button class="btn_add" data-popupId="${product.id}">Add to cart</button>
     </div>`;
 
