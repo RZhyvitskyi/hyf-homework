@@ -20,7 +20,7 @@ SELECT * FROM task ORDER BY created DESC;
 SELECT * FROM task ORDER BY created DESC LIMIT 1;
 
 -- 7
-SELECT task.title, task.due_date FROM task
+SELECT task.title, task.description, task.due_date FROM task
 WHERE task.title LIKE '%database%' OR task.description LIKE '%database%';
 
 -- 8
@@ -32,7 +32,7 @@ JOIN status ON task.status_id = status.id
 GROUP BY status_id;
 
 -- 10
-SELECT status.name AS 'Task Status' FROM task
+SELECT status.name AS task_status, COUNT(task.status_id) AS tasks_amount FROM task
 JOIN status ON task.status_id = status.id
-GROUP BY status_id
+GROUP BY task_status
 ORDER BY COUNT(task.status_id) desc;
