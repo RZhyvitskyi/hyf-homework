@@ -28,8 +28,7 @@ USE school;
 CREATE TABLE class (
     id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     class_name VARCHAR(255) NOT NULL,
-    begins DATETIME NOT NULL,
-    ends DATETIME NOT NULL
+    date DATETIME NOT NULL
 );
 
 CREATE TABLE student (
@@ -39,7 +38,7 @@ CREATE TABLE student (
     phone VARCHAR(255) unique,
     class_id INT UNSIGNED NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (class_id) REFERENCES class(id)
+    FOREIGN KEY (class_id) REFERENCES class(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE INDEX idx_name
@@ -50,7 +49,7 @@ ALTER TABLE student
 ADD status ENUM ('not-started', 'ongoing', 'finished') NOT NULL;
 
 -- Part 3: More queries
-SELECT task.title AS 'Task Name', user.name AS 'User Name' FROM user_task
+SELECT task.title AS 'Task Name', user.name AS 'User Name', user.email AS 'Email' FROM user_task
 JOIN task ON user_task.task_id = task.id
 JOIN user ON user_task.user_id = user.id
 WHERE user.email LIKE '%@spotify.com%'; 
@@ -59,10 +58,9 @@ SELECT task.title AS 'Task Name', user.name AS 'User Name', status.name AS 'Task
 JOIN task ON user_task.task_id = task.id
 JOIN user ON user_task.user_id = user.id
 JOIN status ON task.status_id = status.id
-WHERE user.name = 'Donald Duck' 
-AND task.status_id = 1; 
+WHERE user.name = 'Donald Duck';
 
-SELECT task.title AS 'Task Name', user.name AS 'User Name' FROM user_task
+SELECT task.title AS 'Task Name', user.name AS 'User Name', task.created AS 'Created' FROM user_task
 JOIN task ON user_task.task_id = task.id
 JOIN user ON user_task.user_id = user.id
 WHERE user.name = 'Maryrose Meadows' 
@@ -75,7 +73,7 @@ GROUP BY MONTH(task.created);
 
 CREATE DATABASE bilka_db
     DEFAULT CHARACTER SET = 'utf8mb4';
-
+    
 USE bilka_db;
 
 CREATE TABLE store (
@@ -104,9 +102,16 @@ CREATE TABLE position_type (
 CREATE TABLE responsibility (
     id INT UNSIGNED AUTO_INCREMENT,
     title VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE position_responsibility (
+	id INT UNSIGNED AUTO_INCREMENT,
     position_id INT UNSIGNED NOT NULL,
+    responsibility_id INT UNSIGNED NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (position_id) REFERENCES position_type(id)
+    FOREIGN KEY (position_id) REFERENCES position_type(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (responsibility_id) REFERENCES responsibility(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE employee (
@@ -118,8 +123,8 @@ CREATE TABLE employee (
     position_id INT UNSIGNED NOT NULL,
     department_id INT UNSIGNED NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (position_id) REFERENCES position_type(id),
-    FOREIGN KEY (department_id) REFERENCES department(id)
+    FOREIGN KEY (position_id) REFERENCES position_type(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (department_id) REFERENCES department(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE practicant (
