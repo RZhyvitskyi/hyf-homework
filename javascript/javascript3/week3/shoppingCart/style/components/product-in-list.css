@@ -1,0 +1,70 @@
+.product__item {
+  padding: 1rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid #999;
+  justify-items: center;
+  align-items: center;
+  row-gap: 0.4rem;
+}
+
+.product__item:last-child {
+  border: none;
+}
+
+.product__item h3 {
+  font-size: 1.8rem;
+}
+
+.product__img {
+  grid-row: 1 / span 3;
+  cursor: pointer;
+}
+
+.product__amount {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.product__price {
+  font-family: 'Indie Flower', cursive;
+  font-size: 2.6rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.amount__input {
+  width: 3.2rem;
+  text-align: center;
+  font-size: 1.8rem;
+  border: none;
+  border-bottom: 1px solid #999;
+}
+
+.arrow-left,
+.arrow-right {
+  width: 20px;
+  cursor: pointer;
+}
+
+.btn_delete {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 650px) {
+  .product__price {
+    font-size: 3rem;
+  }
+}

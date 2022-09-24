@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Shopping Cart</title>
+  </head>
+  <body>
+    <header>
+      <div class="container header__container">
+        <h1>Shopping Cart</h1>
+        <div class="search">
+          <input
+            id="search-input"
+            class="search__input"
+            placeholder="Search product"
+            type="text"
+            autocomplete="off" />
+          <ul id="search-list" class="search__list"></ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container main__container">
+        <div class="personal__info">
+          <div class="shopping__currency">
+            <div id="currency-denmark" class="currency currency_active">
+              DKK
+            </div>
+            <div class="currency" id="currency-norway">NOK</div>
+            <div class="currency" id="currency-sweden">SEK</div>
+          </div>
+          <h2 id="user-name" class="user__name"></h2>
+        </div>
+        <ul id="shopping-list" class="shopping__list"></ul>
+        <div id="total-price" class="total-price">Total price: 0</div>
+      </div>
+    </main>
+    <div id="product-popup" class="product__popup"></div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

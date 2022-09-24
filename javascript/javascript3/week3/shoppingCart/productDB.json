@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "name": "Sauce",
+      "price": 10,
+      "description": "In cooking, a sauce is a liquid, cream, or semi-solid food, served on or used in preparing other foods. Most sauces are not normally consumed by themselves; they add flavor, moisture, and visual appeal to a dish.",
+      "id": 1
+    },
+    {
+      "name": "Rice",
+      "price": 20,
+      "description": "Rice, (Oryza sativa), edible starchy cereal grain and the grass plant (family Poaceae) by which it is produced. Roughly one-half of the world population, including virtually all of East and Southeast Asia, is wholly dependent upon rice as a staple food; 95 percent of the world's rice crop is eaten by humans. Rice is cooked by boiling, or it can be ground into a flour. It is eaten alone and in a great variety of soups, side dishes, and main dishes in Asian, Middle Eastern, and many other cuisines. Other products in which rice is used are breakfast cereals, noodles, and such alcoholic beverages as Japanese sake.",
+      "id": 2
+    },
+    {
+      "name": "Tea",
+      "price": 60,
+      "description": "Tea is an aromatic beverage prepared by pouring hot or boiling water over cured or fresh leaves of Camellia sinensis, an evergreen shrub native to China, India and other East Asian countries.Tea is also rarely made from the leaves of Camellia taliensis.After water, it is the most widely consumed drink in the world. There are many different types of tea; some have a cooling, slightly bitter, and astringent flavour, while others have vastly different profiles that include sweet, nutty, floral, or grassy notes. Tea has a stimulating effect in humans primarily due to its caffeine content.",
+      "id": 3
+    },
+    {
+      "name": "Apple",
+      "price": 5,
+      "description": "An apple is an edible fruit produced by an apple tree (Malus domestica). Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today. Apples have been grown for thousands of years in Asia and Europe and were brought to North America by European colonists. Apples have religious and mythological significance in many cultures, including Norse, Greek, and European Christian tradition.",
+      "id": 4
+    },
+    {
+      "name": "Coconut",
+      "price": 30,
+      "description": "The coconut tree (Cocos nucifera) is a member of the palm tree family (Arecaceae) and the only living species of the genus Cocos. The term 'coconut' (or the archaic 'cocoanut') can refer to the whole coconut palm, the seed, or the fruit, which botanically is a drupe, not a nut. The name comes from the old Portuguese word coco, meaning 'head' or 'skull', after the three indentations on the coconut shell that resemble facial features. They are ubiquitous in coastal tropical regions and are a cultural icon of the tropics.",
+      "id": 5
+    },
+    {
+      "name": "Candy",
+      "price": 35,
+      "description": "Candy, also called sweets (British English) or lollies (Australian English, New Zealand English), is a confection that features sugar as a principal ingredient. The category, called sugar confectionery, encompasses any sweet confection, including chocolate, chewing gum, and sugar candy. Vegetables, fruit, or nuts which have been glazed and coated with sugar are said to be candied.",
+      "id": 6
+    },
+    {
+      "name": "Coffee",
+      "price": 40,
+      "description": "Coffee is a beverage brewed from the roasted and ground seeds of the tropical evergreen coffee plant. Coffee is one of the three most popular beverages in the world (alongside water and tea), and it is one of the most profitable international commodities.",
+      "id": 7
+    },
+    {
+      "name": "Orange",
+      "price": 8,
+      "description": "An orange is a fruit of various citrus species in the family Rutaceae (see list of plants known as orange); it primarily refers to Citrus sinensis, which is also called sweet orange, to distinguish it from the related Citrus aurantium, referred to as bitter orange. The sweet orange reproduces asexually (apomixis through nucellar embryony) varieties of sweet orange arise through mutations.",
+      "id": 8
+    },
+    {
+      "name": "Pepper",
+      "price": 7,
+      "description": "The bell pepper (also known as paprika, sweet pepper, pepper, or capsicum) is the fruit of plants in the Grossum Group of the species Capsicum annuum. Cultivars of the plant produce fruits in different colors, including red, yellow, orange, green, white, and purple. Bell peppers are sometimes grouped with less pungent chili varieties as 'sweet peppers'. While they are fruits—botanically classified as berries—they are commonly used as a vegetable ingredient or side dish. The fruits of the Capsicum genus are categorized as chili peppers.",
+      "id": 9
+    },
+    {
+      "name": "Wheat",
+      "price": 25,
+      "description": "Wheat is a grass widely cultivated for its seed, a cereal grain which is a worldwide staple food. The many species of wheat together make up the genus Triticum; the most widely grown is common wheat. The archaeological record suggests that wheat was first cultivated in the regions of the Fertile Crescent around 9600 BCE. Botanically, the wheat kernel is a type of fruit called a caryopsis.",
+      "id": 10
+    }
+  ]
+}
