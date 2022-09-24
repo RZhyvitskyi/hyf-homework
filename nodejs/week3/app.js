@@ -30,7 +30,7 @@ contactsAPIRouter.get('/', async (req, res) => {
   if ('sort' in req.query) {
     const orderBy = req.query.sort.toString();
     if (orderBy.length > 0) {
-      query = query.orderByRaw(orderBy);
+      query = query.orderBy(orderBy);
     }
   }
 
