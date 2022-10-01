@@ -1,11 +1,11 @@
 import React from 'react';
 import Container from '../layout/container/Container';
-import styles from './Home.module.css';
+import './Home.css';
 
 const Home = () => {
   return (
     <Container>
-      <div className={styles.home}>
+      <div className="home">
         <h2>This is a home page</h2>
         <div>
           <p>Here can be found some main info</p>
