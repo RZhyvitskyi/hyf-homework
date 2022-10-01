@@ -1,0 +1,13 @@
+footer {
+  background-color: #999;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+}
+
+.footer__nav {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+}
