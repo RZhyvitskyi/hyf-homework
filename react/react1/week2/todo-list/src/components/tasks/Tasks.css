@@ -7,8 +7,19 @@
   align-items: center;
 }
 
+.tasks__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .tasks__title {
   margin-bottom: 10px;
+}
+
+.tasks__status {
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .tasks__list {

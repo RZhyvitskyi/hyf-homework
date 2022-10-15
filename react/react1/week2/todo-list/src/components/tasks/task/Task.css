@@ -10,6 +10,7 @@
 }
 
 .task__item:hover {
+  background-color: #ddd;
   cursor: pointer;
 }
 

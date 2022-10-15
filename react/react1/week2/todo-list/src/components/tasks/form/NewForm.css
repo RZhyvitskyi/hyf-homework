@@ -24,6 +24,11 @@
   background-color: #fff;
 }
 
+.button:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
 .error_message {
   color: red;
 }
