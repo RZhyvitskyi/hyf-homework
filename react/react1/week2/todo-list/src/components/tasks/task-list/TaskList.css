@@ -9,3 +9,7 @@
   gap: 10px;
   list-style: none;
 }
+
+.tasks__empty {
+  text-align: center;
+}

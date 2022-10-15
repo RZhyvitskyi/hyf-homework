@@ -6,6 +6,7 @@ const TaskList = ({ tasks, deleteTask, changeStatus, title }) => {
   return (
     <>
       <h3 className="tasks__status">{title}</h3>
+      {tasks.length === 0 && <p className="tasks__empty">No tasks</p>}
       <ul className="tasks__list">
         {tasks.map((task) => {
           return (
