@@ -9,6 +9,14 @@ import Home from './components/home/Home';
 import Tasks from './components/tasks/Tasks';
 import About from './components/about/About';
 
+const filterTasks = (tasks) => {
+  return tasks.sort((a, b) => {
+    const firstDate = new Date(a.date);
+    const secondDate = new Date(b.date);
+    return secondDate - firstDate;
+  });
+};
+
 const createNewTask = (task) => {
   return {
     id: Date.now(),
@@ -19,14 +27,27 @@ const createNewTask = (task) => {
 };
 
 function App() {
-  const [myTasks, setMyTasks] = useState(tasks);
+  const [myTasks, setMyTasks] = useState(filterTasks(tasks));
 
   const addNewTask = (task) => {
-    setMyTasks([...myTasks, createNewTask(task)]);
+    const newTasks = [...myTasks, createNewTask(task)];
+    setMyTasks(filterTasks(newTasks));
   };
 
   const deleteTask = (taskId) => {
     setMyTasks(myTasks.filter(({ id }) => id !== taskId));
+  };
+
+  const changeStatus = (taskId) => {
+    const newTasks = myTasks.map((task) => {
+      if (task.id === taskId) {
+        task.done = !task.done;
+      }
+
+      return task;
+    });
+
+    setMyTasks(filterTasks(newTasks));
   };
 
   return (
@@ -42,6 +63,7 @@ function App() {
               tasks={myTasks}
               addNewTask={addNewTask}
               deleteTask={deleteTask}
+              changeStatus={changeStatus}
             />
           }
         />
