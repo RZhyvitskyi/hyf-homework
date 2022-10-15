@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
 import './App.css';
 import tasks from './db/tasks.json';
 import Header from './components/layout/header/Header';
@@ -8,14 +9,32 @@ import Home from './components/home/Home';
 import Tasks from './components/tasks/Tasks';
 import About from './components/about/About';
 
+const createNewTask = (task) => {
+  return {
+    id: Date.now(),
+    title: task,
+    done: false,
+    date: Date.now(),
+  };
+};
+
 function App() {
+  const [myTasks, setMyTasks] = useState(tasks);
+
+  const addNewTask = (task) => {
+    setMyTasks([...myTasks, createNewTask(task)]);
+  };
+
   return (
     <main>
       <Header />
       <Routes>
         <Route path={'/'} element={<Home />} />
         <Route path={'/home'} element={<Home />} />
-        <Route path="/tasks" element={<Tasks tasks={tasks} />} />
+        <Route
+          path="/tasks"
+          element={<Tasks tasks={myTasks} addNewTask={addNewTask} />}
+        />
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
