@@ -11,21 +11,16 @@ import About from './components/about/About';
 function App() {
   return (
     <main>
-      <Header />
-      <Routes>
-        <Route path={'/'} element={<Home />} />
-        <Route path={'/home'} element={<Home />} />
-        <Route
-          path="/tasks"
-          element={
-            <TaskProvider>
-              <Tasks />
-            </TaskProvider>
-          }
-        />
-        <Route path="/about" element={<About />} />
-      </Routes>
-      <Footer />
+      <TaskProvider>
+        <Header />
+        <Routes>
+          <Route path={'/'} element={<Home />} />
+          <Route path={'/home'} element={<Home />} />
+          <Route path="/tasks" element={<Tasks />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+        <Footer />
+      </TaskProvider>
     </main>
   );
 }
