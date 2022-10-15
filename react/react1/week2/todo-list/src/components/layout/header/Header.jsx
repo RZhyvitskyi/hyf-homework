@@ -1,7 +1,9 @@
 import React from 'react';
+
 import Container from '../container/Container';
 import './Header.css';
 import { Link } from 'react-router-dom';
+import Timer from './timer/Timer';
 
 const Header = () => {
   return (
@@ -14,6 +16,9 @@ const Header = () => {
             </Link>
           </div>
           <ul className="nav__list">
+            <li className="nav__item">
+              <Timer />
+            </li>
             <li className="nav__item">
               <Link to="/home" className="nav__link">
                 Home
