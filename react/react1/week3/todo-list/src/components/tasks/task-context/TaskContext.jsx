@@ -5,6 +5,7 @@ const TaskContext = React.createContext();
 const TaskUpdateContext = React.createContext();
 const TaskDeleteContext = React.createContext();
 const TaskAddContext = React.createContext();
+const TaskEditContext = React.createContext();
 
 export const useTask = () => {
   return useContext(TaskContext);
@@ -20,6 +21,10 @@ export const useTaskDelete = () => {
 
 export const useTaskAdd = () => {
   return useContext(TaskAddContext);
+};
+
+export const useTaskEdit = () => {
+  return useContext(TaskEditContext);
 };
 
 const filterTasks = (tasks) => {
@@ -63,12 +68,26 @@ const TaskProvider = ({ children }) => {
     setMyTasks(filterTasks(newTasks));
   };
 
+  const editTask = (taskId, title) => {
+    const editedTasks = myTasks.map((task) => {
+      if (task.id === taskId) {
+        task.title = title;
+      }
+
+      return task;
+    });
+
+    setMyTasks(filterTasks(editedTasks));
+  };
+
   return (
     <TaskContext.Provider value={myTasks}>
       <TaskUpdateContext.Provider value={changeStatus}>
         <TaskDeleteContext.Provider value={deleteTask}>
           <TaskAddContext.Provider value={addNewTask}>
-            {children}
+            <TaskEditContext.Provider value={editTask}>
+              {children}
+            </TaskEditContext.Provider>
           </TaskAddContext.Provider>
         </TaskDeleteContext.Provider>
       </TaskUpdateContext.Provider>
