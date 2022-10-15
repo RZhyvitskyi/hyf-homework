@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Get out of bed",
+    "done": false,
+    "date": "2022-10-01T09:10:25.170Z"
+  },
+  {
+    "id": 2,
+    "title": "Brush teeth",
+    "done": false,
+    "date": "2022-10-01T09:10:25.170Z"
+  },
+  {
+    "id": 3,
+    "title": "Eat breakfast",
+    "done": false,
+    "date": "2022-10-01T09:10:25.170Z"
+  },
+  {
+    "id": 4,
+    "title": "Feed the cat",
+    "done": true,
+    "date": "2022-10-01T09:10:25.170Z"
+  }
+]

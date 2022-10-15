@@ -1,0 +1,15 @@
+.tasks__status {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.tasks__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.tasks__empty {
+  text-align: center;
+}
