@@ -3,7 +3,7 @@ import { BsFillCheckCircleFill } from 'react-icons/bs';
 import { BsFillCircleFill } from 'react-icons/bs';
 import './Task.css';
 
-const Task = ({ task }) => {
+const Task = ({ task, deleteTask }) => {
   const date = new Date(task.date);
 
   return (
@@ -11,6 +11,9 @@ const Task = ({ task }) => {
       <p>{task.done ? <BsFillCheckCircleFill /> : <BsFillCircleFill />}</p>
       <h4>{task.title}</h4>
       <span>{date.toDateString()}</span>
+      <button className="button" onClick={() => deleteTask(task.id)}>
+        Delete
+      </button>
     </li>
   );
 };

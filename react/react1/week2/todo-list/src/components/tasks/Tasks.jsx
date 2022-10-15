@@ -4,7 +4,7 @@ import './Tasks.css';
 import Task from './task/Task';
 import Form from './../form/NewForm';
 
-const Tasks = ({ tasks, addNewTask }) => {
+const Tasks = ({ tasks, addNewTask, deleteTask }) => {
   return (
     <Container>
       <div className="tasks">
@@ -12,7 +12,7 @@ const Tasks = ({ tasks, addNewTask }) => {
         <Form addNewTask={addNewTask} />
         <ul className="tasks__list">
           {tasks.map((task) => {
-            return <Task task={task} key={task.id} />;
+            return <Task task={task} key={task.id} deleteTask={deleteTask} />;
           })}
         </ul>
       </div>

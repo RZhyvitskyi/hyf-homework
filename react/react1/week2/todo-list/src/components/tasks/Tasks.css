@@ -1,4 +1,5 @@
 .tasks {
+  margin-bottom: 40px;
   padding: 40px 0;
   display: flex;
   flex-direction: column;

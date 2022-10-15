@@ -25,6 +25,10 @@ function App() {
     setMyTasks([...myTasks, createNewTask(task)]);
   };
 
+  const deleteTask = (taskId) => {
+    setMyTasks(myTasks.filter(({ id }) => id !== taskId));
+  };
+
   return (
     <main>
       <Header />
@@ -33,7 +37,13 @@ function App() {
         <Route path={'/home'} element={<Home />} />
         <Route
           path="/tasks"
-          element={<Tasks tasks={myTasks} addNewTask={addNewTask} />}
+          element={
+            <Tasks
+              tasks={myTasks}
+              addNewTask={addNewTask}
+              deleteTask={deleteTask}
+            />
+          }
         />
         <Route path="/about" element={<About />} />
       </Routes>
