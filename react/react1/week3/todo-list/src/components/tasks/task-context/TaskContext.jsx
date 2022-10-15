@@ -30,20 +30,20 @@ const filterTasks = (tasks) => {
   });
 };
 
-const createNewTask = (task) => {
+const createNewTask = (task, date) => {
   return {
     id: Date.now(),
     title: task,
     done: false,
-    date: Date.now(),
+    date: date,
   };
 };
 
 const TaskProvider = ({ children }) => {
   const [myTasks, setMyTasks] = useState(filterTasks(tasks));
 
-  const addNewTask = (task) => {
-    const newTasks = [...myTasks, createNewTask(task)];
+  const addNewTask = (task, date) => {
+    const newTasks = [...myTasks, createNewTask(task, date)];
     setMyTasks(filterTasks(newTasks));
   };
 
