@@ -3,11 +3,10 @@ import Container from '../layout/container/Container';
 import './Tasks.css';
 import TaskList from './task-list/TaskList';
 import Form from './form/NewForm';
-import { useTask, useTaskAdd } from './task-context/TaskContext';
+import { useTask } from './task-context/TaskContext';
 
 const Tasks = () => {
-  const tasks = useTask();
-  const addNewTask = useTaskAdd();
+  const { myTasks: tasks, addNewTask } = useTask();
 
   const pendingTasks = tasks.filter(({ done }) => !done);
   const doneTasks = tasks.filter(({ done }) => done);

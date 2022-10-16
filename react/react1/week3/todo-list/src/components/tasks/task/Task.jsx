@@ -2,11 +2,7 @@ import React, { useState } from 'react';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 import { BsFillCircleFill } from 'react-icons/bs';
 import './Task.css';
-import {
-  useTaskDelete,
-  useTaskUpdate,
-  useTaskEdit,
-} from './../task-context/TaskContext';
+import { useTask } from './../task-context/TaskContext';
 
 const Task = ({ task }) => {
   const date = new Date(task.date);
@@ -15,9 +11,7 @@ const Task = ({ task }) => {
   const [edit, setEdit] = useState(false);
   const [emptyTask, setEmptyTask] = useState(false);
 
-  const deleteTask = useTaskDelete();
-  const changeStatus = useTaskUpdate();
-  const editTask = useTaskEdit();
+  const { deleteTask, changeStatus, editTask } = useTask();
 
   const deleteThisTasks = (e) => {
     e.stopPropagation();

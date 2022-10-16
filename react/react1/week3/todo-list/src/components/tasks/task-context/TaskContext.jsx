@@ -1,30 +1,10 @@
 import React, { useState, useContext } from 'react';
 import tasks from './../../../db/tasks.json';
 
-const TaskContext = React.createContext();
-const TaskUpdateContext = React.createContext();
-const TaskDeleteContext = React.createContext();
-const TaskAddContext = React.createContext();
-const TaskEditContext = React.createContext();
+const TaskContext = React.createContext({});
 
 export const useTask = () => {
   return useContext(TaskContext);
-};
-
-export const useTaskUpdate = () => {
-  return useContext(TaskUpdateContext);
-};
-
-export const useTaskDelete = () => {
-  return useContext(TaskDeleteContext);
-};
-
-export const useTaskAdd = () => {
-  return useContext(TaskAddContext);
-};
-
-export const useTaskEdit = () => {
-  return useContext(TaskEditContext);
 };
 
 const filterTasks = (tasks) => {
@@ -81,16 +61,9 @@ const TaskProvider = ({ children }) => {
   };
 
   return (
-    <TaskContext.Provider value={myTasks}>
-      <TaskUpdateContext.Provider value={changeStatus}>
-        <TaskDeleteContext.Provider value={deleteTask}>
-          <TaskAddContext.Provider value={addNewTask}>
-            <TaskEditContext.Provider value={editTask}>
-              {children}
-            </TaskEditContext.Provider>
-          </TaskAddContext.Provider>
-        </TaskDeleteContext.Provider>
-      </TaskUpdateContext.Provider>
+    <TaskContext.Provider
+      value={{ myTasks, changeStatus, deleteTask, addNewTask, editTask }}>
+      {children}
     </TaskContext.Provider>
   );
 };
