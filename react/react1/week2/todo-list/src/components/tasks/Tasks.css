@@ -1,0 +1,30 @@
+.tasks {
+  margin-bottom: 40px;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tasks__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tasks__title {
+  margin-bottom: 10px;
+}
+
+.tasks__status {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.tasks__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}

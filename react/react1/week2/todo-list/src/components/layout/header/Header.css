@@ -1,0 +1,26 @@
+header {
+  background-color: #999;
+}
+
+.nav {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__list {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__link:visited,
+.nav__link:link,
+.nav__link:hover,
+.nav__link:active {
+  text-decoration: none;
+  color: #fff;
+}
