@@ -1,0 +1,19 @@
+.task__item {
+  min-width: 350px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.task__item:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.task_done {
+  background-color: #ddd;
+}
