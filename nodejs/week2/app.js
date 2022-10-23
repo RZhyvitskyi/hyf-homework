@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
   res.send('This is a search engine');
 });
 
-app.get('/search', async (req, res) => {
+app.get('/search', (req, res) => {
   try {
     queryValue = req.query.q;
 
@@ -31,7 +31,13 @@ app.post('/search', async (req, res) => {
     requestBody = req.body;
     queryValue = req.query.q;
 
-    if (queryValue) {
+    if (queryValue && requestBody) {
+      res
+        .status(400)
+        .json({
+          error: 'You cannot search by query and body at the same time',
+        });
+    } else if (queryValue) {
       const filteredArray = findByQuery(documents, queryValue);
 
       res.json(filteredArray);
