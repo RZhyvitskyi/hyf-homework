@@ -1,0 +1,7 @@
+tomato
+potato
+chilli
+onion
+cabbage
+carrot
+ginger
