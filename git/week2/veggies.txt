@@ -1,5 +1,7 @@
 tomato
 potato
-pepper
+peppers
 onion
 cabbage
+carrot
+ginger
